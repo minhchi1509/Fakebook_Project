@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-[#F0F2F5] font-['Segoe_UI'] font-normal box-border">
+<body class="bg-[#F0F2F5] font-['Segoe_UI'] font-normal box-border z-50 overflow-hidden">
     <!-- Navigation bar -->
-    <div class="nav fixed-top flex justify-content-between h-[56px] bg-white shadow-md py-[5px] px-[15px]">
+    <div class="nav fixed-top flex justify-content-between h-[56px] bg-white shadow-md py-[5px] px-[15px] z-20">
         <!-- Searching bar + Facebook Logo-->
         <div class="flex justify-content-between h-100 cursor-pointer">
             <img src="img/nav_bar/facebook.png" alt="" class="h-100 w-[46px] rounded-full mr-[8px]" onclick="location.reload()">
@@ -334,7 +334,7 @@
             <div class="flex flex-col w-full h-[140px] bg-white rounded-xl shadow-md mt-[16px] p-[16px]">
                 <div class="flex align-items-center h-[50px] w-full pb-[12px]">
                     <img src="img/leftMenuImage/avarta.jpg" alt="" class="h-full w-[38px] rounded-full mr-[8px] cursor-pointer">
-                    <input type="text" class="h-full flex-1 bg-[#F0F2F5] rounded-[30px] outline-none font-[400] text-[17px] pl-[13px] hover:bg-[#E4E6E9] cursor-pointer duration-300" placeholder="Chí ơi, bạn đang nghĩ gì thế?">
+                    <input type="text" class="h-full flex-1 bg-[#F0F2F5] rounded-[30px] outline-none font-[400] text-[17px] px-[13px] hover:bg-[#E4E6E9] cursor-pointer duration-300" placeholder="Chí ơi, bạn đang nghĩ gì thế?" id="uploadPostButton">
                 </div>
                 <div class="flex h-[58px] border-t-2 pt-[12px] cursor-pointer font-[600] text-[#65676b] text-[15px]">
                     <button class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] duration-300 py-[5px]">
@@ -357,6 +357,33 @@
                     </button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div id="uploadPostContainer" class="absolute w-full h-[9999px] top-0 z-20 bg-[#F3F3F4] opacity-80" style="visibility: hidden;">
+    </div>
+    <div id="uploadPostBox" class="w-[500px] h-[428px] absolute inset-0 m-auto bg-white z-20 rounded-xl shadow-2xl" style="visibility: hidden;">
+        <!-- Title -->
+        <div class="flex align-items-center w-full h-[60px] border-b-2 py-[12px] px[16px]">
+            <p class="font-[700] text-[20px] text-[#050505] mx-auto">Tạo bài viết</p>
+            <div class="flex align-items-center absolute h-[34px] w-[34px] rounded-full bg-[#E4E6EB] hover:bg-[#D8DADF] right-[16px] cursor-pointer p-[8px]" id="closeUploadPostButton">
+                <img src="img/posting/close.png" alt="" class="h-[15px] w-[15px] mx-auto">
+            </div>
+        </div>
+        <div class="w-[468px] mx-auto">
+            <div class="flex align-items-center h-[72px] w-[468px] mx-auto py-[14px]">
+                <img src="img/leftMenuImage/avarta.jpg" alt="" class="h-[40px] w-[40px] rounded-full object-cover mr-[11px]">
+                <div>
+                    <p class="font-[600] text-[15px] text-[#050505]">Nguyễn Minh Chí</p>
+                    <select class="rounded-md bg-[#E4E6EB] py-[3px] px-[5px] cursor-pointer outline-none font-[600] text-[15px] text-[#050505]">
+                        <option value="private">Chỉ mình tôi</option>
+                        <option value="public" selected>Công khai</option>
+                        <option value="friend">Bạn bè</option>
+                    </select>
+                </div>
+            </div>
+            <textarea class="resize-none h-[150px] w-full outline-none text-[20px]" placeholder="Chí ơi, bạn đang nghĩ gì thế?" id="postContent"></textarea>
+            <img src="img/posting/multiColorBg.png" class="h-[38px] w-[38px] absolute cursor-pointer">
+            <img src="img/posting/emoji.png" class="h-[25px] w-[25px] absolute right-[16px] cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Emoji">
         </div>
     </div>
     <script src="main.js"></script>
