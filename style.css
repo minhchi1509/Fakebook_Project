@@ -1,0 +1,20 @@
+.leftMenu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.leftMenu::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #BCC0C4;
+}
+
+.leftMenu::-webkit-scrollbar-thumb:hover {
+    background-color: #a8aaab;
+}
+
+.leftMenu::-webkit-scrollbar-thumb:active {
+    background-color: #8a8c8d;
+}
+
+.leftMenu::-webkit-scrollbar:hover {
+    background-color: #E5E8EB;
+}
