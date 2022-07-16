@@ -359,9 +359,9 @@
             </div>
         </div>
     </div>
-    <div id="uploadPostContainer" class="absolute w-full h-full top-0 z-20 bg-[#F3F3F4] opacity-80" style="visibility: hidden;">
+    <div id="uploadPostContainer" class="absolute w-full h-full top-0 z-20 bg-[#F3F3F4] opacity-80" style="visibility: visible;">
     </div>
-    <div id="uploadPostBox" class="w-[500px] h-[428px] fixed inset-0 m-auto bg-white z-20 rounded-xl shadow-2xl" style="visibility: hidden;">
+    <div id="uploadPostBox" class="w-[500px] h-[471px] absolute inset-0 m-auto bg-white z-20 rounded-xl shadow-2xl" style="visibility: visible;">
         <!-- Title -->
         <div class="flex align-items-center w-full h-[60px] border-b-2 py-[12px] px[16px]">
             <p class="font-[700] text-[20px] text-[#050505] mx-auto">Tạo bài viết</p>
@@ -384,6 +384,28 @@
             <textarea class="resize-none h-[150px] w-full outline-none text-[20px]" placeholder="Chí ơi, bạn đang nghĩ gì thế?" id="postContent"></textarea>
             <img src="img/posting/multiColorBg.png" class="h-[38px] w-[38px] absolute cursor-pointer">
             <img src="img/posting/emoji.png" class="h-[25px] w-[25px] absolute right-[16px] cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Emoji">
+            <div class="flex align-items-center mt-[50px] p-[11px] h-[65px] rounded-lg border-3">
+                <p class="font-[600] text-[15px] mr-[16px] cursor-pointer">Thêm vào bài viết của bạn</p>
+                <div class="h-full w-[37px] flex align-items-center duration-300 rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Ảnh/video">
+                    <img src="img/posting/image.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                </div>
+                <div class="h-full w-[37px] flex align-items-center duration-300 rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Gắn thẻ người khác">
+                    <img src="img/posting/friendTag.png" alt="" class="mx-auto h-[30px] w-[25px]">
+                </div>
+                <div class="h-full w-[37px] flex align-items-center duration-300 rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Cảm xúc/Hoạt động">
+                    <img src="img/posting/smile.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                </div>
+                <div class="h-full w-[37px] flex align-items-center duration-300 rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Check in">
+                    <img src="img/posting/check-in.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                </div>
+                <div class="h-full w-[37px] flex align-items-center duration-300 rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Tổ chức buổi H&Đ">
+                    <img src="img/posting/microphone.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                </div>
+                <div class="h-full w-[37px] flex align-items-center duration-300 rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Xem thêm">
+                    <img src="img/posting/more.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                </div>
+            </div>
+            <button class="btn btn-primary w-full h-[36px] rounded-md mt-[16px]">Đăng</button>
         </div>
     </div>
     <script src="main.js"></script>
