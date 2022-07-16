@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-[#F0F2F5] font-['Segoe_UI'] font-normal box-border z-50 overflow-hidden">
+<body class="bg-[#F0F2F5] font-['Segoe_UI'] font-normal box-border z-50">
     <!-- Navigation bar -->
     <div class="nav fixed-top flex justify-content-between h-[56px] bg-white shadow-md py-[5px] px-[15px] z-20">
         <!-- Searching bar + Facebook Logo-->
@@ -264,7 +264,7 @@
                 <span>Meta © 2022</span>
             </div>
         </div>
-        <div class="newFeeds lg: block relative mx-[auto] lg:mx-0 top-[24px] w-[400px] sm:w-[550px] md:w-[650px] lg:w-[592px] lg:left-[400px] xl:left-[519px]" style="display: block;">
+        <div class="newFeeds relative mx-[auto] lg:mx-0 top-[24px] w-[400px] sm:w-[550px] md:w-[650px] lg:w-[592px] lg:left-[400px] xl:left-[519px]">
             <!-- Story, Reels, Room Meeting conatiner -->
             <div class="flex flex-col w-full h-[310px] bg-white rounded-xl shadow-md">
                 <!-- Title -->
@@ -359,9 +359,9 @@
             </div>
         </div>
     </div>
-    <div id="uploadPostContainer" class="absolute w-full h-[9999px] top-0 z-20 bg-[#F3F3F4] opacity-80" style="visibility: hidden;">
+    <div id="uploadPostContainer" class="absolute w-full h-full top-0 z-20 bg-[#F3F3F4] opacity-80" style="visibility: hidden;">
     </div>
-    <div id="uploadPostBox" class="w-[500px] h-[428px] absolute inset-0 m-auto bg-white z-20 rounded-xl shadow-2xl" style="visibility: hidden;">
+    <div id="uploadPostBox" class="w-[500px] h-[428px] fixed inset-0 m-auto bg-white z-20 rounded-xl shadow-2xl" style="visibility: hidden;">
         <!-- Title -->
         <div class="flex align-items-center w-full h-[60px] border-b-2 py-[12px] px[16px]">
             <p class="font-[700] text-[20px] text-[#050505] mx-auto">Tạo bài viết</p>

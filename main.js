@@ -83,10 +83,7 @@ document.getElementById("leftMenuControlButton").onclick = function () {
     let leftMenu = document.getElementById("leftMenu");
     let newFeeds = document.getElementsByClassName("newFeeds")[0];
     leftMenu.classList.toggle("hidden");
-    if (leftMenu.classList.contains("hidden"))
-        newFeeds.style.display = "block";
-    else
-        newFeeds.style.display = "none";
+    newFeeds.classList.toggle("hidden");
 }
 
 //Story, Reels, Room meeting control
@@ -108,11 +105,13 @@ for (let i = 0; i < storyReelsTitleList.length; i++) {
     }
 }
 
+//Upload Post Control
 const uploadPostContainer = document.getElementById("uploadPostContainer");
 const uploadPostBox = document.getElementById("uploadPostBox");
 document.getElementById("uploadPostButton").onclick = function () {
     uploadPostContainer.style.visibility = "visible";
     uploadPostBox.style.visibility = "visible";
+    document.getElementsByTagName("body")[0].classList.add("overflow-hidden");
 }
 
 function hiddenUploadPostBox(event) {
@@ -124,6 +123,8 @@ function hiddenUploadPostBox(event) {
         uploadPostBox.style.visibility = "hidden";
         uploadPostContainer.style.visibility = "hidden";
         document.getElementById("uploadPostButton").value = document.getElementById("postContent").value;
+        if (document.getElementsByTagName("body")[0].classList.contains("overflow-hidden"))
+            document.getElementsByTagName("body")[0].classList.remove("overflow-hidden");
     }
 }
 document.addEventListener("click", hiddenUploadPostBox);
@@ -132,4 +133,6 @@ document.getElementById("closeUploadPostButton").onclick = function () {
     uploadPostBox.style.visibility = "hidden";
     uploadPostContainer.style.visibility = "hidden";
     document.getElementById("uploadPostButton").value = document.getElementById("postContent").value;
+    if (document.getElementsByTagName("body")[0].classList.contains("overflow-hidden"))
+        document.getElementsByTagName("body")[0].classList.remove("overflow-hidden");
 }
