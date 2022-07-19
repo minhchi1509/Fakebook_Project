@@ -104,35 +104,3 @@ for (let i = 0; i < storyReelsTitleList.length; i++) {
         storyReelsContentList[i].style.visibility = "visible";
     }
 }
-
-//Upload Post Control
-const uploadPostContainer = document.getElementById("uploadPostContainer");
-const uploadPostBox = document.getElementById("uploadPostBox");
-document.getElementById("uploadPostButton").onclick = function () {
-    uploadPostContainer.style.visibility = "visible";
-    uploadPostBox.style.visibility = "visible";
-    document.getElementsByTagName("body")[0].classList.add("overflow-hidden");
-}
-
-function hiddenUploadPostBox(event) {
-    let mouseX = event.clientX;
-    let mouseY = event.clientY;
-    let l = uploadPostBox.offsetLeft, r = uploadPostBox.offsetLeft + uploadPostBox.offsetWidth;
-    let t = uploadPostBox.offsetTop, b = uploadPostBox.offsetTop + uploadPostBox.offsetHeight;
-    if (mouseX < l || mouseX > r || mouseY < t || mouseY > b) {
-        uploadPostBox.style.visibility = "hidden";
-        uploadPostContainer.style.visibility = "hidden";
-        document.getElementById("uploadPostButton").value = document.getElementById("postContent").value;
-        if (document.getElementsByTagName("body")[0].classList.contains("overflow-hidden"))
-            document.getElementsByTagName("body")[0].classList.remove("overflow-hidden");
-    }
-}
-document.addEventListener("click", hiddenUploadPostBox);
-
-document.getElementById("closeUploadPostButton").onclick = function () {
-    uploadPostBox.style.visibility = "hidden";
-    uploadPostContainer.style.visibility = "hidden";
-    document.getElementById("uploadPostButton").value = document.getElementById("postContent").value;
-    if (document.getElementsByTagName("body")[0].classList.contains("overflow-hidden"))
-        document.getElementsByTagName("body")[0].classList.remove("overflow-hidden");
-}

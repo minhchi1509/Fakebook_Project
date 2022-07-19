@@ -23,185 +23,234 @@
     <div class="nav fixed-top flex justify-content-between h-[56px] bg-white shadow-md py-[5px] px-[15px] z-20">
         <!-- Searching bar + Facebook Logo-->
         <div class="flex justify-content-between h-100 cursor-pointer">
-            <img src="img/nav_bar/facebook.png" alt="" class="h-100 w-[46px] rounded-full mr-[8px]" onclick="location.reload()">
-            <div class="relative flex align-items-center h-100 bg-[#F0F2F5] p-[15px] rounded-full overflow-hidden xl:min-w-[240px] max-w-[46px] xl:rounded-[30px] xl:mr-[15px]" id="searchingBar">
+            <img src="img/nav_bar/facebook.png" alt="" class="h-100 w-[46px] rounded-full mr-[8px]"
+                onclick="location.reload()">
+            <div class="relative flex align-items-center h-100 bg-[#F0F2F5] p-[15px] rounded-full overflow-hidden xl:min-w-[240px] max-w-[46px] xl:rounded-[30px] xl:mr-[15px]"
+                id="searchingBar">
                 <img src="img/nav_bar/search.png" alt="" class="opacity-50 mr-[10px] h-[15px] w-[15px]">
-                <input type="text" placeholder="Tìm kiếm trên Facebook" class="flex-1 bg-transparent outline-none hidden xl:block">
+                <input type="text" placeholder="Tìm kiếm trên Facebook"
+                    class="flex-1 bg-transparent outline-none hidden xl:block">
             </div>
             <!-- Searching popup -->
-            <div class="h-[100px] w-[324px] bg-white shadow-lg position-absolute z-20 top-[0px] left-[0px] rounded-lg" id="searchingPopup" style="visibility: hidden;">
+            <div class="h-[100px] w-[324px] bg-white shadow-lg position-absolute z-20 top-[0px] left-[0px] rounded-lg"
+                id="searchingPopup" style="visibility: hidden;">
                 <div class="flex align-items-center w-100 h-[56px] py-[5px]">
-                    <img src="img/nav_bar/arrow.png" alt="" class="h-[25px] w-[25px] ml-[27px] hover:bg-[#F2F2F2] rounded-full">
-                    <input type="text" class="w-[240px] h-100 ml-[17px] rounded-[30px] bg-[#F0F2F5] outline-none px-[15px] py-[8px]" placeholder="Tìm kiếm trên Facebook">
+                    <img src="img/nav_bar/arrow.png" alt=""
+                        class="h-[25px] w-[25px] ml-[27px] hover:bg-[#F2F2F2] rounded-full">
+                    <input type="text"
+                        class="w-[240px] h-100 ml-[17px] rounded-[30px] bg-[#F0F2F5] outline-none px-[15px] py-[8px]"
+                        placeholder="Tìm kiếm trên Facebook">
                 </div>
                 <p class="text-center mt-[7px] text-[#8a8d91]">Không có tìm kiếm nào gần đây</p>
             </div>
         </div>
         <!-- Homepage, Friend, Watch, Group, Gaming -->
         <div class="grid grid-cols-2 gap-[30px] w-[150px] lg:grid-cols-5 lg:gap-[8px] lg:w-[592px]" id="Homepage">
-            <a class="align-items-center relative rounded-[10px] cursor-pointer duration-300 before:content-[''] before:absolute before:bottom-[-6px] before:bg-[#1B74E4] before:w-full before:h-[5px] hidden lg:flex" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trang chủ">
+            <a class="align-items-center relative rounded-[10px] cursor-pointer duration-300 before:content-[''] before:absolute before:bottom-[-6px] before:bg-[#1B74E4] before:w-full before:h-[5px] hidden lg:flex"
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trang chủ">
                 <img id="home" src="img/nav_bar/homeFilled.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
             </a>
-            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bạn bè">
-                <img id = "friend" src="img/nav_bar/friendRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
+            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex"
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bạn bè">
+                <img id="friend" src="img/nav_bar/friendRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
             </a>
-            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Watch">
-                <img id = "watch" src="img/nav_bar/watchRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
+            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex"
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Watch">
+                <img id="watch" src="img/nav_bar/watchRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
             </a>
-            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nhóm">
-                <img id = "group" src="img/nav_bar/groupRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
+            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex"
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nhóm">
+                <img id="group" src="img/nav_bar/groupRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
             </a>
-            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trò chơi">
-                <img id = "game" src="img/nav_bar/gameRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
+            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex"
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trò chơi">
+                <img id="game" src="img/nav_bar/gameRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
             </a>
             <!-- On mobile screen -->
-            <a class="flex lg:hidden align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 z-10" id="listHomepageButton">
+            <a class="flex lg:hidden align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 z-10"
+                id="listHomepageButton">
                 <img src="img/nav_bar/list.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
                 <!-- ListHomepage -->
-                <div class="lg:hidden absolute top-[calc(100%+10px)] w-[200px] rounded-lg p-[10px] shadow-md z-10 bg-white hidden" id = "listHomepagePopup">
-                    <a class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
+                <div class="lg:hidden absolute top-[calc(100%+10px)] w-[200px] rounded-lg p-[10px] shadow-md z-10 bg-white hidden"
+                    id="listHomepagePopup">
+                    <a
+                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
                         <img src="img/nav_bar/homeRounded.png" alt="" class="h-[20px] w-[20px] mr-[10px]">
                         <p class="text-[#3C4043]">Trang chủ</p>
                     </a>
-                    <a class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
+                    <a
+                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
                         <img src="img/nav_bar/friendRounded.png" alt="" class="h-[20px] w-[20px] mr-[10px]">
                         <p class="text-[#3C4043]">Bạn bè</p>
                     </a>
-                    <a class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
+                    <a
+                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
                         <img src="img/nav_bar/watchRounded.png" alt="" class="h-[20px] w-[20px] mr-[10px]">
                         <p class="text-[#3C4043]">Watch</p>
                     </a>
-                    <a class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
+                    <a
+                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
                         <img src="img/nav_bar/groupRounded.png" alt="" class="h-[20px] w-[20px] mr-[10px]">
                         <p class="text-[#3C4043]">Nhóm</p>
                     </a>
-                    <a class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
+                    <a
+                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
                         <img src="img/nav_bar/gameRounded.png" alt="" class="h-[20px] w-[20px] mr-[10px]">
                         <p class="text-[#3C4043]">Trò chơi</p>
                     </a>
                 </div>
             </a>
-            <a class="flex lg:hidden align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300" id="leftMenuControlButton">
+            <a class="flex lg:hidden align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300"
+                id="leftMenuControlButton">
                 <img src="img/nav_bar/web-design.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
             </a>
 
         </div>
         <!-- Messenger, Notifications,... -->
         <div class="hidden sm:grid grid-cols-4 gap-[5px]">
-            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Menu">
-                <img src="img/nav_bar/dots-menu.png" class="w-[20px] h-[20px] mx-[auto]" >
+            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]"
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Menu">
+                <img src="img/nav_bar/dots-menu.png" class="w-[20px] h-[20px] mx-[auto]">
             </a>
-            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messenger">
-                <img src="img/nav_bar/messenger.png" class="w-[20px] h-[20px] mx-[auto]" >
+            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]"
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messenger">
+                <img src="img/nav_bar/messenger.png" class="w-[20px] h-[20px] mx-[auto]">
             </a>
-            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thông báo">
-                <img src="img/nav_bar/notification.png" class="w-[20px] h-[20px] mx-[auto]" >
+            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]"
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thông báo">
+                <img src="img/nav_bar/notification.png" class="w-[20px] h-[20px] mx-[auto]">
             </a>
-            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
-                <img src="img/nav_bar/downward-arrow.png" class="w-[20px] h-[20px] mx-[auto]" >
+            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]"
+                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+                <img src="img/nav_bar/downward-arrow.png" class="w-[20px] h-[20px] mx-[auto]">
             </a>
         </div>
     </div>
     <!-- content -->
     <div class="flex relative top-[56px] w-100 h-[656px]">
         <!-- Left Menu -->
-        <div class="leftMenu hidden lg:block w-full lg:w-[360px] lg:fixed top-[56px] h-[656px] py-[16px] pl-[8px] lg:overflow-auto cursor-pointer" id="leftMenu">
+        <div class="leftMenu hidden lg:block w-full lg:w-[360px] lg:fixed top-[56px] h-[656px] py-[16px] pl-[8px] lg:overflow-auto cursor-pointer"
+            id="leftMenu">
             <div class="leftMenuTop pb-[9px] border-solid border-b-[1px] border-[#CED0D4] mb-[10px]">
                 <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/avarta.jpg" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Nguyễn Minh Chí</span>
                 </div>
                 <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                    <img src="img/leftMenuImage/friend-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                    <img src="img/leftMenuImage/friend-color.png" alt=""
+                        class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Tìm kiếm bạn bè</span>
                 </div>
                 <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                    <img src="img/leftMenuImage/messenger-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                    <img src="img/leftMenuImage/messenger-color.png" alt=""
+                        class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Messenger</span>
                 </div>
                 <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                    <img src="img/leftMenuImage/fanpage-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                    <img src="img/leftMenuImage/fanpage-color.png" alt=""
+                        class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Trang</span>
                 </div>
                 <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                    <img src="img/leftMenuImage/marketplace-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                    <img src="img/leftMenuImage/marketplace-color.png" alt=""
+                        class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Marketplace</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg" id="watchMoreTopButton">
+                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg"
+                    id="watchMoreTopButton">
                     <img src="img/leftMenuImage/arrowDown.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Xem thêm</span>
                 </div>
                 <div id="leftMenuTopMore" class="hidden">
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/fundraiser-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/fundraiser-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Chiến dịch gây quỹ</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/play-game-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/play-game-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Chơi game</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/save-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/save-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Đã lưu</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/credit-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/credit-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Facebook Pay</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/latest-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/latest-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Gần đây nhất</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/blood-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/blood-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Hiến máu</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/ads-center.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/ads-center.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Hoạt động quảng cáo gần đây</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/celebrate-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/celebrate-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Kỷ niệm</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/event-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/event-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Sự kiện</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/health-and-emotions-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/health-and-emotions-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Sức khỏe cảm xúc</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/ads-manage-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/ads-manage-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Trình quảng lý quảng cáo</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/climate-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/climate-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Trung tâm Khoa học Khí hậu</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/ads-center.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/ads-center.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Trung tâm quảng cáo</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/emergency-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/emergency-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Ứng phó khẩn cấp</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/video-game-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/video-game-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Video chơi game</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/live-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/live-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Video trực tiếp</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/favorite-color.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <img src="img/leftMenuImage/favorite-color.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Yêu thích</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg" id="hiddenLeftMenuTop">
-                        <img src="img/leftMenuImage/arrowUp.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg"
+                        id="hiddenLeftMenuTop">
+                        <img src="img/leftMenuImage/arrowUp.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Ẩn bớt</span>
                     </div>
                 </div>
@@ -212,44 +261,56 @@
                     <a class="right-[0px] absolute">Chỉnh sửa</a>
                 </div>
                 <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                    <img src="img/leftMenuImage/vutrugenz.jpg" alt="" class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
+                    <img src="img/leftMenuImage/vutrugenz.jpg" alt=""
+                        class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">Vũ trụ GenZ</span>
                 </div>
                 <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                    <img src="img/leftMenuImage/d20ptithanoi.jpg" alt="" class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
+                    <img src="img/leftMenuImage/d20ptithanoi.jpg" alt=""
+                        class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">D20 PTIT Hà Nội</span>
                 </div>
                 <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                    <img src="img/leftMenuImage/cotsonggenz.png" alt="" class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
+                    <img src="img/leftMenuImage/cotsonggenz.png" alt=""
+                        class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">"Cột sống" GenZ</span>
                 </div>
                 <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                    <img src="img/leftMenuImage/d20ptithanoi.jpg" alt="" class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
+                    <img src="img/leftMenuImage/d20ptithanoi.jpg" alt=""
+                        class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">D21 PTIT Hà Nội</span>
                 </div>
                 <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                    <img src="img/leftMenuImage/dikhapthegioi.jpg" alt="" class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
+                    <img src="img/leftMenuImage/dikhapthegioi.jpg" alt=""
+                        class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">Đi Khắp Thế Giới!</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg" id="watchMoreBottomButton">
-                    <img src="img/leftMenuImage/arrowDown.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px] object-cover">
+                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg"
+                    id="watchMoreBottomButton">
+                    <img src="img/leftMenuImage/arrowDown.png" alt=""
+                        class="h-[36px] w-[36px] rounded-full mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">Xem thêm</span>
                 </div>
                 <div id="leftMenuBottomMore" class="hidden">
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/laptrinhcppcoban.jpg" alt="" class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
+                        <img src="img/leftMenuImage/laptrinhcppcoban.jpg" alt=""
+                            class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                         <span class="flex-1 font-[500]">Lập Trình C/C++ Cơ Bản</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/vieclamIT.jpg" alt="" class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
+                        <img src="img/leftMenuImage/vieclamIT.jpg" alt=""
+                            class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                         <span class="flex-1 font-[500]">Việc Làm IT, DEV, Freelancer</span>
                     </div>
                     <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
-                        <img src="img/leftMenuImage/7zone.jpg" alt="" class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
+                        <img src="img/leftMenuImage/7zone.jpg" alt=""
+                            class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                         <span class="flex-1 font-[500]">7onez Community</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg" id="hiddenLeftMenuBottom">
-                        <img src="img/leftMenuImage/arrowUp.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px] object-cover">
+                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg"
+                        id="hiddenLeftMenuBottom">
+                        <img src="img/leftMenuImage/arrowUp.png" alt=""
+                            class="h-[36px] w-[36px] rounded-full mr-[12px] object-cover">
                         <span class="flex-1 font-[500]">Ẩn bớt</span>
                     </div>
                 </div>
@@ -264,18 +325,23 @@
                 <span>Meta © 2022</span>
             </div>
         </div>
-        <div class="newFeeds relative mx-[auto] lg:mx-0 top-[24px] w-[400px] sm:w-[550px] md:w-[650px] lg:w-[592px] lg:left-[400px] xl:left-[519px]">
+        <div
+            class="newFeeds relative mx-[auto] lg:mx-0 top-[24px] w-[400px] sm:w-[550px] md:w-[650px] lg:w-[592px] lg:left-[400px] xl:left-[519px]">
             <!-- Story, Reels, Room Meeting conatiner -->
             <div class="flex flex-col w-full h-[310px] bg-white rounded-xl shadow-md">
                 <!-- Title -->
-                <div class="grid grid-cols-3 gap-[15px] w-full h-[72px] border-b-[1px] border-solid border-[#E5E5E5] px-[16px] py-[5px]" id="storyReelsTitle">
-                    <button class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] duration-300 cursor-pointer text-[#65676b] before:content-[''] before:absolute before:bottom-[-6px] before:bg-[#1B74E4] before:w-full before:h-[5px] text-[#1B74E4]">
+                <div class="grid grid-cols-3 gap-[15px] w-full h-[72px] border-b-[1px] border-solid border-[#E5E5E5] px-[16px] py-[5px]"
+                    id="storyReelsTitle">
+                    <button
+                        class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] duration-300 cursor-pointer text-[#65676b] before:content-[''] before:absolute before:bottom-[-6px] before:bg-[#1B74E4] before:w-full before:h-[5px] text-[#1B74E4]">
                         <p class="font-[600] mx-[auto]">Tin</p>
                     </button>
-                    <button class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] duration-300 cursor-pointer text-[#65676b]">
+                    <button
+                        class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] duration-300 cursor-pointer text-[#65676b]">
                         <p class="font-[600] mx-[auto]">Reels</p>
                     </button>
-                    <button class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] duration-300 cursor-pointer text-[#65676b]">
+                    <button
+                        class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] duration-300 cursor-pointer text-[#65676b]">
                         <p class="font-[600] mx-[auto] text-center">Phòng họp mặt</p>
                     </button>
                 </div>
@@ -283,14 +349,17 @@
                 <div class="relative p-[16px] flex-1" id="storyReelsContent">
                     <!-- Story -->
                     <div class="flex absolute align-items-center" style="visibility: visible;">
-                        <div class="h-[206px] w-[115px] overflow-hidden rounded-xl shadow-[0_1px_1px_0_#e7e9eb] border cursor-pointer mr-[20px]">
+                        <div
+                            class="h-[206px] w-[115px] overflow-hidden rounded-xl shadow-[0_1px_1px_0_#e7e9eb] border cursor-pointer mr-[20px]">
                             <img src="img/leftMenuImage/avarta.jpg" alt="" class="h-[75%] w-100 object-cover">
-                            <img src="img/storyReels/createStory.png" alt="" class="h-[25px] w-[25px] mx-[auto] mt-[5px]">
+                            <img src="img/storyReels/createStory.png" alt=""
+                                class="h-[25px] w-[25px] mx-[auto] mt-[5px]">
                             <p class="text-center text-[12px] font-[600] text-[#040404]">Tạo tin</p>
                         </div>
                         <div class="text-[13px] text-[400] text-[#050505]">
                             <div class="flex mb-[20px]">
-                                <img src="img/storyReels/story-love-letter.png" alt="" class="h-[20px] w-[20px] mr-[15px]">
+                                <img src="img/storyReels/story-love-letter.png" alt=""
+                                    class="h-[20px] w-[20px] mr-[15px]">
                                 <span>Chia sẻ khoảnh khắc với gia đình và bạn bè.</span>
                             </div>
                             <div class="flex mb-[20px]">
@@ -298,18 +367,22 @@
                                 <span>Tin sẽ biến mất sau 24h giờ.</span>
                             </div>
                             <div class="flex mb-[20px]">
-                                <img src="img/storyReels/story-messenger.png" alt="" class="h-[20px] w-[20px] mr-[15px]">
+                                <img src="img/storyReels/story-messenger.png" alt=""
+                                    class="h-[20px] w-[20px] mr-[15px]">
                                 <span>Câu trả lời, cảm xúc hiển thị riêng tư.</span>
                             </div>
                         </div>
                     </div>
                     <!-- Reels -->
                     <div class="absolute" style="visibility: hidden;">
-                        <div class="absolute h-[206px] w-[115px] overflow-hidden rounded-xl shadow-[0_1px_1px_0_#e7e9eb] border cursor-pointer p-[10px]" style="background-image: linear-gradient(to right top, #ffbd7e, #ffa982, #ff9590, #ff86a5, #f57dbe);">
-                            <div class="flex align-items-center h-[75px] w-[75px] rounded-full bg-white mx-[auto] mt-[30px]">
+                        <div class="absolute h-[206px] w-[115px] overflow-hidden rounded-xl shadow-[0_1px_1px_0_#e7e9eb] border cursor-pointer p-[10px]"
+                            style="background-image: linear-gradient(to right top, #ffbd7e, #ffa982, #ff9590, #ff86a5, #f57dbe);">
+                            <div
+                                class="flex align-items-center h-[75px] w-[75px] rounded-full bg-white mx-[auto] mt-[30px]">
                                 <img src="img/storyReels/createReels.png" alt="" class="h-[35px] w-[35px] mx-[auto]">
                             </div>
-                            <div class="h-[30px] w-[30px] rounded-full absolute top-[75px] right-[10px] p-[4px]" style="background-image: linear-gradient(to right top, #ffbd7e, #ffa982, #ff9590, #ff86a5, #f57dbe);">
+                            <div class="h-[30px] w-[30px] rounded-full absolute top-[75px] right-[10px] p-[4px]"
+                                style="background-image: linear-gradient(to right top, #ffbd7e, #ffa982, #ff9590, #ff86a5, #f57dbe);">
                                 <div class="flex align-items-center h-full w-full rounded-full bg-white">
                                     <img src="img/storyReels/plus.png" alt="" class="w-[10px] h-[10px] mx-[auto]">
                                 </div>
@@ -321,7 +394,8 @@
                     <div class="absolute" style="visibility: hidden;">
                         <div class="w-[162px] h-[206px] rounded-xl border-2 p-[10px] cursor-pointer hover:bg-[#F2F2F2]">
                             <div class="flex align-items-center h-[60px] w-[60px] rounded-full border-3 mx-[auto]">
-                                <img src="img/storyReels/createRoomMeeting.png" alt="" class="mx-[auto] h-[25px] w-[25px]">
+                                <img src="img/storyReels/createRoomMeeting.png" alt=""
+                                    class="mx-[auto] h-[25px] w-[25px]">
                             </div>
                             <p class="text-center mt-[10px] font-[600] text-[15px]">Phòng họp mặt</p>
                             <p class="text-center font-[400] text-[13px] text-[#65676b]">Bắt đầu</p>
@@ -333,23 +407,30 @@
             <!-- Posting -->
             <div class="flex flex-col w-full h-[140px] bg-white rounded-xl shadow-md mt-[16px] p-[16px]">
                 <div class="flex align-items-center h-[50px] w-full pb-[12px]">
-                    <img src="img/leftMenuImage/avarta.jpg" alt="" class="h-full w-[38px] rounded-full mr-[8px] cursor-pointer">
-                    <input type="text" class="h-full flex-1 bg-[#F0F2F5] rounded-[30px] outline-none font-[400] text-[17px] px-[13px] hover:bg-[#E4E6E9] cursor-pointer duration-300" placeholder="Chí ơi, bạn đang nghĩ gì thế?" id="uploadPostButton">
+                    <img src="img/leftMenuImage/avarta.jpg" alt=""
+                        class="h-full w-[38px] rounded-full mr-[8px] cursor-pointer">
+                    <input type="text"
+                        class="h-full flex-1 bg-[#F0F2F5] rounded-[30px] outline-none font-[400] text-[17px] px-[13px] hover:bg-[#E4E6E9] cursor-pointer duration-300"
+                        placeholder="Chí ơi, bạn đang nghĩ gì thế?" id="uploadPostButton" data-bs-toggle="modal"
+                        data-bs-target="#uploadPostBox">
                 </div>
                 <div class="flex h-[58px] border-t-2 pt-[12px] cursor-pointer font-[600] text-[#65676b] text-[15px]">
-                    <button class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] duration-300 py-[5px]">
+                    <button
+                        class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] duration-300 py-[5px]">
                         <div class="flex align-items-center mx-[auto]">
                             <img src="img/posting/livestream-color.png" alt="" class="h-[34px] w-[34px] mr-[10px]">
                             <p>Video trực tiếp</p>
                         </div>
                     </button>
-                    <button class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] duration-300 py-[5px]">
+                    <button
+                        class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] duration-300 py-[5px]">
                         <div class="flex align-items-center mx-[auto]">
                             <img src="img/posting/image.png" alt="" class="h-[34px] w-[34px] mr-[10px]">
                             <p>Ảnh/video</p>
                         </div>
                     </button>
-                    <button class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] duration-300 py-[5px]">
+                    <button
+                        class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] duration-300 py-[5px]">
                         <div class="flex align-items-center mx-[auto]">
                             <img src="img/posting/smile.png" alt="" class="h-[34px] w-[34px] mr-[10px]">
                             <p>Cảm xúc/Hoạt động</p>
@@ -359,53 +440,64 @@
             </div>
         </div>
     </div>
-    <div id="uploadPostContainer" class="absolute w-full h-full top-0 z-20 bg-[#F3F3F4] opacity-80" style="visibility: hidden;">
-    </div>
-    <div id="uploadPostBox" class="w-[500px] h-[471px] absolute inset-0 m-auto bg-white z-20 rounded-xl shadow-2xl" style="visibility: hidden;">
-        <!-- Title -->
-        <div class="flex align-items-center w-full h-[60px] border-b-2 py-[12px] px[16px]">
-            <p class="font-[700] text-[20px] text-[#050505] mx-auto">Tạo bài viết</p>
-            <div class="flex align-items-center absolute h-[34px] w-[34px] rounded-full bg-[#E4E6EB] hover:bg-[#D8DADF] right-[16px] cursor-pointer p-[8px]" id="closeUploadPostButton">
-                <img src="img/posting/close.png" alt="" class="h-[15px] w-[15px] mx-auto">
-            </div>
-        </div>
-        <div class="w-[468px] mx-auto">
-            <div class="flex align-items-center h-[72px] w-[468px] mx-auto py-[14px]">
-                <img src="img/leftMenuImage/avarta.jpg" alt="" class="h-[40px] w-[40px] rounded-full object-cover mr-[11px]">
-                <div>
-                    <p class="font-[600] text-[15px] text-[#050505]">Nguyễn Minh Chí</p>
-                    <select class="rounded-md bg-[#E4E6EB] py-[3px] px-[5px] cursor-pointer outline-none font-[600] text-[15px] text-[#050505]">
-                        <option value="private">Chỉ mình tôi</option>
-                        <option value="public" selected>Công khai</option>
-                        <option value="friend">Bạn bè</option>
-                    </select>
+    <div class="modal fade" id="uploadPostBox">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content rounded-xl shadow-2xl">
+                <div class="modal-header">
+                    <p class="font-[700] text-[20px] text-[#050505] mx-auto">Tạo bài viết</p>
+                    <div><button class="btn btn-close shadow-none" data-bs-dismiss="modal"></button></div>
+                </div>
+                <div class="modal-body py-[14px]">
+                    <div class="flex align-items-center h-[44px] mx-auto">
+                        <img src="img/leftMenuImage/avarta.jpg" alt=""
+                            class="h-[40px] w-[40px] rounded-full object-cover mr-[11px]">
+                        <div>
+                            <p class="font-[600] text-[15px] text-[#050505]">Nguyễn Minh Chí</p>
+                            <select
+                                class="rounded-md bg-[#E4E6EB] py-[3px] px-[5px] cursor-pointer outline-none font-[600] text-[15px] text-[#050505]">
+                                <option value="private">Chỉ mình tôi</option>
+                                <option value="public" selected>Công khai</option>
+                                <option value="friend">Bạn bè</option>
+                            </select>
+                        </div>
+                    </div>
+                    <textarea class="resize-none h-[150px] w-full outline-none text-[20px] mt-[11px]"
+                        placeholder="Chí ơi, bạn đang nghĩ gì thế?" id="postContent"></textarea>
+                    <div class="flex justify-content-between">
+                        <img src="img/posting/multiColorBg.png" class="h-[38px] w-[38px] cursor-pointer">
+                        <img src="img/posting/emoji.png" class="h-[25px] w-[25px] cursor-pointer"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Emoji">
+                    </div>
+                    <div class="flex align-items-center mt-[12px] p-[11px] h-[65px] rounded-lg border-3">
+                        <p class="font-[600] text-[15px] mr-[16px] cursor-pointer">Thêm vào bài viết của bạn</p>
+                        <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Ảnh/video">
+                            <img src="img/posting/image.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                        </div>
+                        <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Gắn thẻ người khác">
+                            <img src="img/posting/friendTag.png" alt="" class="mx-auto h-[30px] w-[25px]">
+                        </div>
+                        <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Cảm xúc/Hoạt động">
+                            <img src="img/posting/smile.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                        </div>
+                        <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Check in">
+                            <img src="img/posting/check-in.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                        </div>
+                        <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Tổ chức buổi H&Đ">
+                            <img src="img/posting/microphone.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                        </div>
+                        <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Xem thêm">
+                            <img src="img/posting/more.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-full h-[36px] rounded-md mt-[16px]">Đăng</button>
                 </div>
             </div>
-            <textarea class="resize-none h-[150px] w-full outline-none text-[20px]" placeholder="Chí ơi, bạn đang nghĩ gì thế?" id="postContent"></textarea>
-            <img src="img/posting/multiColorBg.png" class="h-[38px] w-[38px] absolute cursor-pointer">
-            <img src="img/posting/emoji.png" class="h-[25px] w-[25px] absolute right-[16px] cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Emoji">
-            <div class="flex align-items-center mt-[50px] p-[11px] h-[65px] rounded-lg border-3">
-                <p class="font-[600] text-[15px] mr-[16px] cursor-pointer">Thêm vào bài viết của bạn</p>
-                <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Ảnh/video">
-                    <img src="img/posting/image.png" alt="" class="mx-auto h-[25px] w-[25px]">
-                </div>
-                <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Gắn thẻ người khác">
-                    <img src="img/posting/friendTag.png" alt="" class="mx-auto h-[30px] w-[25px]">
-                </div>
-                <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Cảm xúc/Hoạt động">
-                    <img src="img/posting/smile.png" alt="" class="mx-auto h-[25px] w-[25px]">
-                </div>
-                <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Check in">
-                    <img src="img/posting/check-in.png" alt="" class="mx-auto h-[25px] w-[25px]">
-                </div>
-                <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Tổ chức buổi H&Đ">
-                    <img src="img/posting/microphone.png" alt="" class="mx-auto h-[25px] w-[25px]">
-                </div>
-                <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]" data-bs-toggle="tooltip" data-bs-placement="top" title="Xem thêm">
-                    <img src="img/posting/more.png" alt="" class="mx-auto h-[25px] w-[25px]">
-                </div>
-            </div>
-            <button class="btn btn-primary w-full h-[36px] rounded-md mt-[16px]">Đăng</button>
         </div>
     </div>
     <script src="main.js"></script>
