@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Inter" , type="text/css" />
     <!-- TailwindCss -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -328,7 +331,7 @@
         <div
             class="newFeeds relative mx-[auto] lg:mx-0 top-[24px] w-[400px] sm:w-[550px] md:w-[650px] lg:w-[592px] lg:left-[400px] xl:left-[519px]">
             <!-- Story, Reels, Room Meeting conatiner -->
-            <div class="flex flex-col w-full h-[310px] bg-white rounded-xl shadow-md">
+            <div class="flex flex-col w-full h-[310px] bg-white rounded-xl shadow-md mb-[16px]">
                 <!-- Title -->
                 <div class="grid grid-cols-3 gap-[15px] w-full h-[72px] border-b-[1px] border-solid border-[#E5E5E5] px-[16px] py-[5px]"
                     id="storyReelsTitle">
@@ -405,7 +408,7 @@
                 </div>
             </div>
             <!-- Posting -->
-            <div class="flex flex-col w-full h-[140px] bg-white rounded-xl shadow-md mt-[16px] p-[16px]">
+            <div class="flex flex-col w-full h-[140px] bg-white rounded-xl shadow-md mb-[16px] p-[16px]">
                 <div class="flex align-items-center h-[50px] w-full pb-[12px]">
                     <img src="img/leftMenuImage/avarta.jpg" alt=""
                         class="h-full w-[38px] rounded-full mr-[8px] cursor-pointer">
@@ -438,6 +441,9 @@
                     </button>
                 </div>
             </div>
+            <!-- Bài viết của bạn -->
+            <div class="h-[80px]"></div>
+
         </div>
     </div>
     <div class="modal fade" id="uploadPostBox">
@@ -495,8 +501,8 @@
                             <img src="img/posting/more.png" alt="" class="mx-auto h-[25px] w-[25px]">
                         </div>
                     </div>
-                    <button class="btn btn-primary w-full h-[36px] rounded-md mt-[16px]"
-                        data-bs-dismiss="modal">Đăng</button>
+                    <button class="btn btn-primary w-full h-[36px] rounded-md mt-[16px] disabled cursor-pointer"
+                        data-bs-dismiss="modal" id="uploadStatusBtn">Đăng</button>
                 </div>
             </div>
         </div>
