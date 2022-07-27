@@ -44,3 +44,9 @@ textarea::-webkit-scrollbar-thumb:active {
 textarea::-webkit-scrollbar:hover {
     background-color: #E5E8EB;
 }
+
+@media only screen and (max-width: 1460px) {
+    #chattingNav{
+        display: none;
+    }
+}

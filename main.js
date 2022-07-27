@@ -155,8 +155,8 @@ $("#uploadStatusBtn").onclick = function () {
             $('#emotionalControl').children[1].classList.toggle('hidden');
         }, 500);" onmouseleave = "$('#emotionalControl').children[1].classList.toggle('hidden');">
         <div class="flex align-items-center">
-            <i class="far fa-thumbs-up text-[25px] text-[#65676B]"></i>
-            <p class="font-[600] text-[15px] text-[#65676b] ml-[10px]">Thích</p>
+            <img src="img/uploadPostControl/thumpup.png" class="h-[25px] w-[25px]">
+            <p class="font-[600] text-[15px] ml-[10px]" style="color: #65676b">Thích</p>
         </div>
         <div
             class="flex align-items-center absolute h-[50px] w-[260px] left-0 rounded-[30px] px-[15px] bottom-100 bg-white border-2 shadow-xl hidden">
