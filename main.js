@@ -213,3 +213,13 @@ $("#uploadStatusBtn").onclick = function () {
     $(".newFeeds").insertBefore(post, $(".newFeeds").lastElementChild)
     $("#postContent").value = "";
 }
+
+//Messenger, Notification popup handle:
+const navBarRightList = Array.from($("#navBarRight").getElementsByTagName("button"));
+navBarRightList.forEach((value) => {
+    value.onclick = function (event) {
+        if (event.target === value || event.target === value.children[0]) {
+            value.children[1].classList.toggle("hidden");
+        }
+    }
+})

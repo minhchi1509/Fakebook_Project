@@ -110,23 +110,66 @@
 
         </div>
         <!-- Messenger, Notifications,... -->
-        <div class="hidden sm:grid grid-cols-4 gap-[5px]">
-            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]"
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Menu">
+        <div class="hidden sm:grid grid-cols-4 gap-[5px]" id="navBarRight">
+            <button
+                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]">
                 <img src="img/nav_bar/dots-menu.png" class="w-[20px] h-[20px] mx-[auto]">
-            </a>
-            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]"
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messenger">
+            </button>
+            <button
+                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]">
                 <img src="img/nav_bar/messenger.png" class="w-[20px] h-[20px] mx-[auto]">
-            </a>
-            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]"
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thông báo">
+                <div class="hidden absolute w-[343px] rounded-lg shadow-lg bg-white top-100 left-[-190px]">
+                    <div class="border-b-2 p-[10px] overflow-y-scroll">
+                        <div class="flex align-items-center justify-content-between">
+                            <p class="font-[700] text-[24px] text-[#050505]">Chat</p>
+                            <div class="flex align-items-center gap-[15px]">
+                                <img src="img/chattingNav/more.png" class="h-[20px] w-[20px]">
+                                <img src="img/messengerBox/maximize.png" class="h-[20px] w-[20px]">
+                                <img src="img/messengerBox/edit.png" class="h-[20px] w-[20px]">
+                            </div>
+                        </div>
+                        <div
+                            class="flex align-items-center h-[36px] w-ful p-[10px] rounded-[30px] bg-[#F0F2F5] mt-[15px]">
+                            <img src="img/nav_bar/search.png" class="h-[16px] w-[16px] mr-[10px]">
+                            <input type="text" class="bg-transparent flex-1 outline-none text-[#050505]"
+                                placeholder="Tìm kiếm trên Messenger">
+                        </div>
+                        <div class="flex justify-content-center">
+                            <p class="mt-[15px] font-[400] text-[17px] text-[#050505]">Không tìm thấy tin nhắn</p>
+                        </div>
+                    </div>
+                    <div class="py-[10px]">
+                        <a href="#" class="font-[600] text-[15px] text-[#216fdb] hover:underline">Xem tất cả trong
+                            Messenger</a>
+                    </div>
+                </div>
+            </button>
+            <button
+                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]">
                 <img src="img/nav_bar/notification.png" class="w-[20px] h-[20px] mx-[auto]">
-            </a>
-            <a class="flex align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]"
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+                <div class="absolute w-[343px] rounded-lg shadow-lg bg-white top-100 left-[-240px] p-[15px]">
+                    <div class="flex align-items-center justify-content-between">
+                        <p class="font-[700] text-[24px] text-[#050505]">Thông báo</p>
+                        <img src="img/chattingNav/more.png" class="h-[20px] w-[20px]">
+                    </div>
+                    <div class="flex mt-[10px]">
+                        <div
+                            class="h-[36px] px-[10px] py-[15px] bg-[#E7F3FF] flex align-items-center justify-content-between rounded-[30px] mr-[10px]">
+                            <p class="font-[600] text-[15px] text-[#1877f2]">Tất cả</p>
+                        </div>
+                        <div
+                            class="h-[36px] px-[10px] py-[15px] flex align-items-center justify-content-between rounded-[30px] hover:bg-[#F2F2F2] duration-300">
+                            <p class="font-[600] text-[15px] text-[#050505]">Chưa đọc</p>
+                        </div>
+                    </div>
+                    <img src="img/messengerBox/bell.png" alt="" class="h-[112px] w-[112px] mx-auto mt-[30px] mb-[20px]">
+                    <p class="font-[700] text-[20px] text-[#65676b]">Bạn không có thông báo nào</p>
+                </div>
+            </button>
+            <button
+                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]">
                 <img src="img/nav_bar/downward-arrow.png" class="w-[20px] h-[20px] mx-[auto]">
-            </a>
+            </button>
         </div>
     </div>
     <!-- content -->
@@ -546,10 +589,13 @@
                     </div>
                     <div class="flex align-items-center mt-[12px] p-[11px] h-[65px] rounded-lg border-3">
                         <p class="font-[600] text-[15px] mr-[16px] cursor-pointer">Thêm vào bài viết của bạn</p>
-                        <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]"
-                            data-bs-toggle="tooltip" data-bs-placement="top" title="Ảnh/video">
-                            <img src="img/posting/image.png" alt="" class="mx-auto h-[25px] w-[25px]">
-                        </div>
+                        <label for="uploadImgVideo">
+                            <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]"
+                                data-bs-toggle="tooltip" data-bs-placement="top" title="Ảnh/video">
+                                <img src="img/posting/image.png" alt="" class="mx-auto h-[25px] w-[25px]">
+                            </div>
+                        </label>
+                        <input type="file" id="uploadImgVideo" class="hidden">
                         <div class="h-full w-[37px] flex align-items-center rounded-full hover:bg-[#F2F2F2] cursor-pointer mr-[4px]"
                             data-bs-toggle="tooltip" data-bs-placement="top" title="Gắn thẻ người khác">
                             <img src="img/posting/friendTag.png" alt="" class="mx-auto h-[30px] w-[25px]">
