@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -21,89 +21,161 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-[#F0F2F5] font-['Segoe_UI'] font-normal box-border z-50">
+<body class="dark:bg-[#18191A] bg-[#F0F2F5] font-['Segoe_UI'] font-normal box-border z-50">
     <!-- Navigation bar -->
-    <div class="nav fixed-top flex justify-content-between h-[56px] bg-white shadow-md py-[5px] px-[15px] z-20">
+    <div
+        class="bg-[white] dark:bg-[#242526] nav fixed-top flex justify-content-between h-[56px] shadow-md py-[5px] px-[15px] z-20 border-b-[1px] dark:border-b-[#303030]">
         <!-- Searching bar + Facebook Logo-->
         <div class="flex justify-content-between h-100 cursor-pointer">
             <img src="img/nav_bar/facebook.png" alt="" class="h-100 w-[46px] rounded-full mr-[8px]"
                 onclick="location.reload()">
-            <div class="relative flex align-items-center h-100 bg-[#F0F2F5] p-[15px] rounded-full overflow-hidden xl:min-w-[240px] max-w-[46px] xl:rounded-[30px] xl:mr-[15px]"
+            <div class="relative flex align-items-center justify-center h-100 bg-[#F0F2F5] dark:bg-[#3A3B3C] p-[5px] xl:p-[15px] rounded-full overflow-hidden xl:min-w-[240px] min-w-[45px] xl:rounded-[30px] xl:mr-[15px] dark:text-[white]"
                 id="searchingBar">
-                <img src="img/nav_bar/search.png" alt="" class="opacity-50 mr-[10px] h-[15px] w-[15px]">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 52.966 52.966" class="h-[15px] w-[15px] xl:mr-[10px] dark:fill-[#B0B3B8]">
+                    <path
+                        d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21  c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279  C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19  S32.459,40,21.983,40z" />
+                </svg>
                 <input type="text" placeholder="Tìm kiếm trên Facebook"
                     class="flex-1 bg-transparent outline-none hidden xl:block">
             </div>
             <!-- Searching popup -->
-            <div class="h-[100px] w-[324px] bg-white shadow-lg position-absolute z-20 top-[0px] left-[0px] rounded-lg"
+            <div class="h-[100px] w-[324px] bg-[white] dark:bg-[#242526] shadow-lg position-absolute z-20 top-[0px] left-[0px] rounded-lg"
                 id="searchingPopup" style="visibility: hidden;">
                 <div class="flex align-items-center w-100 h-[56px] py-[5px]">
                     <img src="img/nav_bar/arrow.png" alt=""
-                        class="h-[25px] w-[25px] ml-[27px] hover:bg-[#F2F2F2] rounded-full">
+                        class="h-[25px] w-[25px] ml-[27px] hover:bg-[#F2F2F2] dark:hover:bg-[#393A3B] rounded-full">
                     <input type="text"
-                        class="w-[240px] h-100 ml-[17px] rounded-[30px] bg-[#F0F2F5] outline-none px-[15px] py-[8px]"
+                        class="w-[240px] h-100 ml-[17px] rounded-[30px] bg-[#F0F2F5] dark:bg-[#3A3B3C] outline-none px-[15px] py-[8px] dark:text-[white]"
                         placeholder="Tìm kiếm trên Facebook">
                 </div>
                 <p class="text-center mt-[7px] text-[#8a8d91]">Không có tìm kiếm nào gần đây</p>
             </div>
         </div>
         <!-- Homepage, Friend, Watch, Group, Gaming -->
-        <div class="grid grid-cols-2 gap-[30px] w-[150px] lg:grid-cols-5 lg:gap-[8px] lg:w-[592px]" id="Homepage">
-            <a class="align-items-center relative rounded-[10px] cursor-pointer duration-300 before:content-[''] before:absolute before:bottom-[-6px] before:bg-[#1B74E4] before:w-full before:h-[5px] hidden lg:flex"
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trang chủ">
-                <img id="home" src="img/nav_bar/homeFilled.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
+        <div class="relative grid grid-cols-2 gap-[30px] w-[150px] lg:grid-cols-5 lg:gap-[8px] lg:w-[592px]"
+            id="middleNavbarList">
+            <div class="hidden lg:block absolute w-[112px] h-[5px] bg-[#1B74E4] bottom-[-6px]" id="underlineNavbar"
+                style="left:0px">
+            </div>
+            <a
+                class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300 hidden lg:flex">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 491.398 491.398"
+                    class="h-[25px] w-[25px] mx-auto dark:fill-[#B0B3B8] fill-[#65676B] fill-[#1B74E4] dark:fill-[#1B74E4]">
+                    <path
+                        d="M481.765,220.422L276.474,15.123c-16.967-16.918-44.557-16.942-61.559,0.023L9.626,220.422    c-12.835,12.833-12.835,33.65,0,46.483c12.843,12.842,33.646,12.842,46.487,0l27.828-27.832v214.872    c0,19.343,15.682,35.024,35.027,35.024h74.826v-97.62c0-7.584,6.146-13.741,13.743-13.741h76.352    c7.59,0,13.739,6.157,13.739,13.741v97.621h74.813c19.346,0,35.027-15.681,35.027-35.024V239.091l27.812,27.815    c6.425,6.421,14.833,9.63,23.243,9.63c8.408,0,16.819-3.209,23.242-9.63C494.609,254.072,494.609,233.256,481.765,220.422z" />
+                </svg>
             </a>
-            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex"
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bạn bè">
-                <img id="friend" src="img/nav_bar/friendRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
+            <a
+                class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300 hidden lg:flex">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 335.436 335.436" class="h-[25px] w-[25px] mx-auto dark:fill-[#B0B3B8] fill-[#65676B]">
+                    <circle cx="255.436" cy="110.304" r="44.138" />
+                    <path
+                        d="M100.725,187.928C45.096,187.928,0,233.024,0,288.653h201.45C201.45,233.024,156.354,187.928,100.725,187.928z" />
+                    <path
+                        d="M255.436,184.442c-20.787,0-39.711,7.938-53.931,20.938c14.212,17.138,23.672,37.368,27.712,59.062h106.219   C335.436,220.259,299.618,184.442,255.436,184.442z" />
+                    <circle cx="100.725" cy="102.355" r="55.573" />
+                </svg>
             </a>
-            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex"
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Watch">
-                <img id="watch" src="img/nav_bar/watchRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
+            <a
+                class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300 hidden lg:flex">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 485 485"
+                    class="h-[25px] w-[25px] mx-auto dark:fill-[#B0B3B8] fill-[#65676B]">
+                    <path
+                        d="M413.974,71.026C368.171,25.225,307.274,0,242.5,0S116.829,25.225,71.026,71.026C25.225,116.829,0,177.726,0,242.5   s25.225,125.671,71.026,171.474C116.829,459.775,177.726,485,242.5,485s125.671-25.225,171.474-71.026   C459.775,368.171,485,307.274,485,242.5S459.775,116.829,413.974,71.026z M242.5,455C125.327,455,30,359.673,30,242.5   S125.327,30,242.5,30S455,125.327,455,242.5S359.673,455,242.5,455z" />
+                    <polygon points="181.062,336.575 343.938,242.5 181.062,148.425  " />
+                </svg>
             </a>
-            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex"
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nhóm">
-                <img id="group" src="img/nav_bar/groupRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
+            <a
+                class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300 hidden lg:flex">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 488.361 488.361" class="h-[25px] w-[25px] mx-auto dark:fill-[#B0B3B8] fill-[#65676B]">
+                    <path
+                        d="M488.23,353.58c-6.2-41.6-22.3-82.5-60.3-95.7c14.8-9.2,24.6-25.6,24.6-44.3c0-28.8-23.3-52.1-52.1-52.1    c-28.8,0-52.1,23.3-52.1,52.1c0,18.7,9.8,35.1,24.6,44.3c-10.9,3.8-19.9,9.8-27.5,17.4c10.4,19.8,17.7,44.2,22,72.7    c1,7-0.2,14.1-3.4,20.2h111.6C483.33,368.28,489.33,361.38,488.23,353.58z M400.33,196.68c-9.4,0-17,7.6-17,17    c0,4.3-3.5,7.8-7.8,7.8s-7.8-3.5-7.8-7.8c0-17.9,14.6-32.5,32.5-32.5c4.3,0,7.8,3.5,7.8,7.8    C408.13,193.18,404.63,196.68,400.33,196.68z M277.23,235.78c17.7-11,29.5-30.7,29.5-53.2c0-34.6-28-62.6-62.6-62.6    s-62.6,28-62.6,62.6c0,22.4,11.8,42.1,29.5,53.2c-45.7,15.8-65,65-72.4,114.8c-1.4,9.3,5.9,17.6,15.3,17.6h180.3    c9.4,0,16.7-8.3,15.3-17.6C342.23,300.78,322.83,251.58,277.23,235.78z M244.13,162.28c-11.2,0-20.4,9.1-20.4,20.4    c0,5.2-4.2,9.3-9.3,9.3c-5.2,0-9.3-4.2-9.3-9.3c0-21.5,17.5-39.1,39.1-39.1c5.2,0,9.3,4.2,9.3,9.3    C253.43,158.08,249.33,162.28,244.13,162.28z M488.23,353.58c-6.2-41.6-22.3-82.5-60.3-95.7c14.8-9.2,24.6-25.6,24.6-44.3    c0-28.8-23.3-52.1-52.1-52.1c-28.8,0-52.1,23.3-52.1,52.1c0,18.7,9.8,35.1,24.6,44.3c-10.9,3.8-19.9,9.8-27.5,17.4    c10.4,19.8,17.7,44.2,22,72.7c1,7-0.2,14.1-3.4,20.2h111.6C483.33,368.28,489.33,361.38,488.23,353.58z M400.33,196.68    c-9.4,0-17,7.6-17,17c0,4.3-3.5,7.8-7.8,7.8s-7.8-3.5-7.8-7.8c0-17.9,14.6-32.5,32.5-32.5c4.3,0,7.8,3.5,7.8,7.8    C408.13,193.18,404.63,196.68,400.33,196.68z M120.93,348.08c4.2-28.5,11.6-52.9,22-72.7c-7.6-7.6-16.6-13.7-27.5-17.4    c14.8-9.2,24.6-25.6,24.6-44.3c0-28.8-23.3-52.1-52.1-52.1s-52.1,23.3-52.1,52.1c0,18.7,9.8,35.1,24.6,44.3    c-38,13.1-54.2,54.1-60.3,95.7c-1.1,7.7,4.9,14.7,12.8,14.7h111.6C121.13,362.08,119.93,355.08,120.93,348.08z M87.93,196.68    c-9.4,0-17,7.6-17,17c0,4.3-3.5,7.8-7.8,7.8s-7.8-3.5-7.8-7.8c0-17.9,14.6-32.5,32.5-32.5c4.3,0,7.8,3.5,7.8,7.8    C95.63,193.18,92.23,196.68,87.93,196.68z" />
+                </svg>
             </a>
-            <a class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 hidden lg:flex"
-                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trò chơi">
-                <img id="game" src="img/nav_bar/gameRounded.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
+            <a
+                class="align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300 hidden lg:flex">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"
+                    class="h-[25px] w-[25px] mx-auto dark:fill-[#B0B3B8] fill-[#65676B]">
+                    <path
+                        d="M9 3.988v-2.988h-1v2.988c-3.564 0.105-8 1.282-8 2.487v7.041c0 0.827 0.673 1.5 1.5 1.5h1.79l1.996-3.931c0.567 0.104 1.713 0.274 3.173 0.274 1.479 0 2.694-0.174 3.288-0.277l1.908 3.934h1.845c0.827 0 1.5-0.673 1.5-1.5v-7.041c0-1.205-4.437-2.383-8-2.487zM16 13.516c0 0.275-0.225 0.5-0.5 0.5h-1.218l-1.976-4.070-0.386 0.085c-0.015 0.003-1.515 0.329-3.462 0.329-1.941 0-3.315-0.323-3.329-0.327l-0.384-0.093-2.068 4.075h-1.177c-0.275 0-0.5-0.225-0.5-0.5v-6.915c0.502-0.437 3.38-1.518 7-1.611v0.011h1v-0.013c3.619 0.094 6.498 1.175 7 1.612v6.917zM5 7.020h0.998v1h-0.998v1.020h-1v-1.020h-1v-1h1v-1.020h1v1.020zM12.5 9.020c0.827 0 1.5-0.673 1.5-1.5s-0.673-1.5-1.5-1.5-1.5 0.672-1.5 1.5 0.673 1.5 1.5 1.5zM12.5 7.020c0.275 0 0.5 0.225 0.5 0.5s-0.225 0.5-0.5 0.5-0.5-0.225-0.5-0.5 0.225-0.5 0.5-0.5z" />
+                </svg>
             </a>
             <!-- On mobile screen -->
-            <a class="flex lg:hidden align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300 z-10"
+            <a class="flex lg:hidden align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300 z-10"
                 id="listHomepageButton">
-                <img src="img/nav_bar/list.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 377 377"
+                    class="h-[25px] w-[25px] mx-auto dark:fill-[#B0B3B8] fill-[#65676B]">
+                    <circle cx="15" cy="88.5" r="15" />
+                    <rect x="75" y="73.5" width="302" height="30" />
+                    <circle cx="15" cy="288.5" r="15" />
+                    <rect x="75" y="273.5" width="302" height="30" />
+                    <circle cx="15" cy="188.5" r="15" />
+                    <rect x="75" y="173.5" width="302" height="30" />
+                </svg>
                 <!-- ListHomepage -->
-                <div class="lg:hidden absolute top-[calc(100%+10px)] w-[200px] rounded-lg p-[10px] shadow-md z-10 bg-white hidden"
+                <div class="lg:hidden absolute top-[calc(100%+10px)] w-[200px] rounded-lg p-[10px] shadow-md z-10 bg-[white] dark:bg-[#242526] hidden"
                     id="listHomepagePopup">
                     <a
-                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
-                        <img src="img/nav_bar/homeRounded.png" alt="" class="h-[20px] w-[20px] mr-[10px]">
-                        <p class="text-[#3C4043]">Trang chủ</p>
+                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] p-[8px] cursor-pointer mb-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 491.398 491.398"
+                            class="h-[20px] w-[20px] mr-[10px] dark:fill-[#B0B3B8] fill-[#65676B]">
+                            <path
+                                d="M481.765,220.422L276.474,15.123c-16.967-16.918-44.557-16.942-61.559,0.023L9.626,220.422    c-12.835,12.833-12.835,33.65,0,46.483c12.843,12.842,33.646,12.842,46.487,0l27.828-27.832v214.872    c0,19.343,15.682,35.024,35.027,35.024h74.826v-97.62c0-7.584,6.146-13.741,13.743-13.741h76.352    c7.59,0,13.739,6.157,13.739,13.741v97.621h74.813c19.346,0,35.027-15.681,35.027-35.024V239.091l27.812,27.815    c6.425,6.421,14.833,9.63,23.243,9.63c8.408,0,16.819-3.209,23.242-9.63C494.609,254.072,494.609,233.256,481.765,220.422z" />
+                        </svg>
+                        <p class="text-[#3C4043] dark:text-[#e4e6eb]">Trang chủ</p>
                     </a>
                     <a
-                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
-                        <img src="img/nav_bar/friendRounded.png" alt="" class="h-[20px] w-[20px] mr-[10px]">
-                        <p class="text-[#3C4043]">Bạn bè</p>
+                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] p-[8px] cursor-pointer mb-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 335.436 335.436"
+                            class="h-[20px] w-[20px] mr-[10px] dark:fill-[#B0B3B8] fill-[#65676B]">
+                            <circle cx="255.436" cy="110.304" r="44.138" />
+                            <path
+                                d="M100.725,187.928C45.096,187.928,0,233.024,0,288.653h201.45C201.45,233.024,156.354,187.928,100.725,187.928z" />
+                            <path
+                                d="M255.436,184.442c-20.787,0-39.711,7.938-53.931,20.938c14.212,17.138,23.672,37.368,27.712,59.062h106.219   C335.436,220.259,299.618,184.442,255.436,184.442z" />
+                            <circle cx="100.725" cy="102.355" r="55.573" />
+                        </svg>
+                        <p class="text-[#3C4043] dark:text-[#e4e6eb]">Bạn bè</p>
                     </a>
                     <a
-                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
-                        <img src="img/nav_bar/watchRounded.png" alt="" class="h-[20px] w-[20px] mr-[10px]">
-                        <p class="text-[#3C4043]">Watch</p>
+                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] p-[8px] cursor-pointer mb-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 485 485"
+                            class="h-[20px] w-[20px] mr-[10px] dark:fill-[#B0B3B8] fill-[#65676B]">
+                            <path
+                                d="M413.974,71.026C368.171,25.225,307.274,0,242.5,0S116.829,25.225,71.026,71.026C25.225,116.829,0,177.726,0,242.5   s25.225,125.671,71.026,171.474C116.829,459.775,177.726,485,242.5,485s125.671-25.225,171.474-71.026   C459.775,368.171,485,307.274,485,242.5S459.775,116.829,413.974,71.026z M242.5,455C125.327,455,30,359.673,30,242.5   S125.327,30,242.5,30S455,125.327,455,242.5S359.673,455,242.5,455z" />
+                            <polygon points="181.062,336.575 343.938,242.5 181.062,148.425  " />
+                        </svg>
+                        <p class="text-[#3C4043] dark:text-[#e4e6eb]">Watch</p>
                     </a>
                     <a
-                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
-                        <img src="img/nav_bar/groupRounded.png" alt="" class="h-[20px] w-[20px] mr-[10px]">
-                        <p class="text-[#3C4043]">Nhóm</p>
+                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] p-[8px] cursor-pointer mb-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 488.361 488.361"
+                            class="h-[20px] w-[20px] mr-[10px] dark:fill-[#B0B3B8] fill-[#65676B]">
+                            <path
+                                d="M488.23,353.58c-6.2-41.6-22.3-82.5-60.3-95.7c14.8-9.2,24.6-25.6,24.6-44.3c0-28.8-23.3-52.1-52.1-52.1    c-28.8,0-52.1,23.3-52.1,52.1c0,18.7,9.8,35.1,24.6,44.3c-10.9,3.8-19.9,9.8-27.5,17.4c10.4,19.8,17.7,44.2,22,72.7    c1,7-0.2,14.1-3.4,20.2h111.6C483.33,368.28,489.33,361.38,488.23,353.58z M400.33,196.68c-9.4,0-17,7.6-17,17    c0,4.3-3.5,7.8-7.8,7.8s-7.8-3.5-7.8-7.8c0-17.9,14.6-32.5,32.5-32.5c4.3,0,7.8,3.5,7.8,7.8    C408.13,193.18,404.63,196.68,400.33,196.68z M277.23,235.78c17.7-11,29.5-30.7,29.5-53.2c0-34.6-28-62.6-62.6-62.6    s-62.6,28-62.6,62.6c0,22.4,11.8,42.1,29.5,53.2c-45.7,15.8-65,65-72.4,114.8c-1.4,9.3,5.9,17.6,15.3,17.6h180.3    c9.4,0,16.7-8.3,15.3-17.6C342.23,300.78,322.83,251.58,277.23,235.78z M244.13,162.28c-11.2,0-20.4,9.1-20.4,20.4    c0,5.2-4.2,9.3-9.3,9.3c-5.2,0-9.3-4.2-9.3-9.3c0-21.5,17.5-39.1,39.1-39.1c5.2,0,9.3,4.2,9.3,9.3    C253.43,158.08,249.33,162.28,244.13,162.28z M488.23,353.58c-6.2-41.6-22.3-82.5-60.3-95.7c14.8-9.2,24.6-25.6,24.6-44.3    c0-28.8-23.3-52.1-52.1-52.1c-28.8,0-52.1,23.3-52.1,52.1c0,18.7,9.8,35.1,24.6,44.3c-10.9,3.8-19.9,9.8-27.5,17.4    c10.4,19.8,17.7,44.2,22,72.7c1,7-0.2,14.1-3.4,20.2h111.6C483.33,368.28,489.33,361.38,488.23,353.58z M400.33,196.68    c-9.4,0-17,7.6-17,17c0,4.3-3.5,7.8-7.8,7.8s-7.8-3.5-7.8-7.8c0-17.9,14.6-32.5,32.5-32.5c4.3,0,7.8,3.5,7.8,7.8    C408.13,193.18,404.63,196.68,400.33,196.68z M120.93,348.08c4.2-28.5,11.6-52.9,22-72.7c-7.6-7.6-16.6-13.7-27.5-17.4    c14.8-9.2,24.6-25.6,24.6-44.3c0-28.8-23.3-52.1-52.1-52.1s-52.1,23.3-52.1,52.1c0,18.7,9.8,35.1,24.6,44.3    c-38,13.1-54.2,54.1-60.3,95.7c-1.1,7.7,4.9,14.7,12.8,14.7h111.6C121.13,362.08,119.93,355.08,120.93,348.08z M87.93,196.68    c-9.4,0-17,7.6-17,17c0,4.3-3.5,7.8-7.8,7.8s-7.8-3.5-7.8-7.8c0-17.9,14.6-32.5,32.5-32.5c4.3,0,7.8,3.5,7.8,7.8    C95.63,193.18,92.23,196.68,87.93,196.68z" />
+                        </svg>
+                        <p class="text-[#3C4043] dark:text-[#e4e6eb]">Nhóm</p>
                     </a>
                     <a
-                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] p-[8px] cursor-pointer mb-[10px]">
-                        <img src="img/nav_bar/gameRounded.png" alt="" class="h-[20px] w-[20px] mr-[10px]">
-                        <p class="text-[#3C4043]">Trò chơi</p>
+                        class="flex align-items-center h-[50px] rounded-md duration-300 hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] p-[8px] cursor-pointer mb-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 17 17" class="h-[20px] w-[20px] mr-[10px] dark:fill-[#B0B3B8] fill-[#65676B]">
+                            <path
+                                d="M9 3.988v-2.988h-1v2.988c-3.564 0.105-8 1.282-8 2.487v7.041c0 0.827 0.673 1.5 1.5 1.5h1.79l1.996-3.931c0.567 0.104 1.713 0.274 3.173 0.274 1.479 0 2.694-0.174 3.288-0.277l1.908 3.934h1.845c0.827 0 1.5-0.673 1.5-1.5v-7.041c0-1.205-4.437-2.383-8-2.487zM16 13.516c0 0.275-0.225 0.5-0.5 0.5h-1.218l-1.976-4.070-0.386 0.085c-0.015 0.003-1.515 0.329-3.462 0.329-1.941 0-3.315-0.323-3.329-0.327l-0.384-0.093-2.068 4.075h-1.177c-0.275 0-0.5-0.225-0.5-0.5v-6.915c0.502-0.437 3.38-1.518 7-1.611v0.011h1v-0.013c3.619 0.094 6.498 1.175 7 1.612v6.917zM5 7.020h0.998v1h-0.998v1.020h-1v-1.020h-1v-1h1v-1.020h1v1.020zM12.5 9.020c0.827 0 1.5-0.673 1.5-1.5s-0.673-1.5-1.5-1.5-1.5 0.672-1.5 1.5 0.673 1.5 1.5 1.5zM12.5 7.020c0.275 0 0.5 0.225 0.5 0.5s-0.225 0.5-0.5 0.5-0.5-0.225-0.5-0.5 0.225-0.5 0.5-0.5z" />
+                        </svg>
+                        <p class="text-[#3C4043] dark:text-[#e4e6eb]">Trò chơi</p>
                     </a>
                 </div>
             </a>
-            <a class="flex lg:hidden align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] duration-300"
+            <a class="flex lg:hidden align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300"
                 id="leftMenuControlButton">
                 <img src="img/nav_bar/web-design.png" alt="" class="h-[25px] w-[25px] mx-[auto]">
             </a>
@@ -112,30 +184,89 @@
         <!-- Messenger, Notifications,... -->
         <div class="hidden sm:grid grid-cols-4 gap-[5px]" id="navBarRight">
             <button
-                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]">
-                <img src="img/nav_bar/dots-menu.png" class="w-[20px] h-[20px] mx-[auto]">
+                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] dark:bg-[#3A3B3C] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF] dark:hover:bg-[#4E4F50]">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 276.167 276.167" class="h-[20px] w-[20px] mx-auto dark:fill-[#E4E6EB]">
+                    <path
+                        d="M33.144,2.471C15.336,2.471,0.85,16.958,0.85,34.765s14.48,32.293,32.294,32.293s32.294-14.486,32.294-32.293    S50.951,2.471,33.144,2.471z" />
+                    <path
+                        d="M137.663,2.471c-17.807,0-32.294,14.487-32.294,32.294s14.487,32.293,32.294,32.293c17.808,0,32.297-14.486,32.297-32.293    S155.477,2.471,137.663,2.471z" />
+                    <path
+                        d="M243.873,67.059c17.804,0,32.294-14.486,32.294-32.293S261.689,2.471,243.873,2.471s-32.294,14.487-32.294,32.294    S226.068,67.059,243.873,67.059z" />
+                    <path
+                        d="M32.3,170.539c17.807,0,32.297-14.483,32.297-32.293c0-17.811-14.49-32.297-32.297-32.297S0,120.436,0,138.246    C0,156.056,14.493,170.539,32.3,170.539z" />
+                    <path
+                        d="M136.819,170.539c17.804,0,32.294-14.483,32.294-32.293c0-17.811-14.478-32.297-32.294-32.297    c-17.813,0-32.294,14.486-32.294,32.297C104.525,156.056,119.012,170.539,136.819,170.539z" />
+                    <path
+                        d="M243.038,170.539c17.811,0,32.294-14.483,32.294-32.293c0-17.811-14.483-32.297-32.294-32.297    s-32.306,14.486-32.306,32.297C210.732,156.056,225.222,170.539,243.038,170.539z" />
+                    <path
+                        d="M33.039,209.108c-17.807,0-32.3,14.483-32.3,32.294c0,17.804,14.493,32.293,32.3,32.293s32.293-14.482,32.293-32.293    S50.846,209.108,33.039,209.108z" />
+                    <path
+                        d="M137.564,209.108c-17.808,0-32.3,14.483-32.3,32.294c0,17.804,14.487,32.293,32.3,32.293    c17.804,0,32.293-14.482,32.293-32.293S155.368,209.108,137.564,209.108z" />
+                    <path
+                        d="M243.771,209.108c-17.804,0-32.294,14.483-32.294,32.294c0,17.804,14.49,32.293,32.294,32.293    c17.811,0,32.294-14.482,32.294-32.293S261.575,209.108,243.771,209.108z" />
+
+                </svg>
             </button>
             <button
-                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]">
-                <img src="img/nav_bar/messenger.png" class="w-[20px] h-[20px] mx-[auto]">
-                <div class="hidden absolute w-[343px] rounded-lg shadow-lg bg-white top-100 left-[-190px]">
-                    <div class="border-b-2 p-[10px] overflow-y-scroll">
+                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] dark:bg-[#3A3B3C] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF] dark:hover:bg-[#4E4F50]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    class="h-[25px] w-[25px] mx-auto dark:fill-[#E4E6EB]">
+                    <path
+                        d="M12 3c-4.92 0-8.91 3.729-8.91 8.332 0 2.616 1.291 4.952 3.311 6.479V21l3.041-1.687c.811.228 1.668.35 2.559.35 4.92 0 8.91-3.73 8.91-8.331C20.91 6.729 16.92 3 12 3zm.938 11.172-2.305-2.394-4.438 2.454 4.865-5.163 2.305 2.395 4.439-2.455-4.866 5.163z" />
+                </svg>
+                <div
+                    class="hidden absolute w-[343px] rounded-lg shadow-lg bg-[white] dark:bg-[#242526] top-100 left-[-190px]">
+                    <div class="border-b-[1px] dark:border-b-[#303030] p-[10px] overflow-auto">
                         <div class="flex align-items-center justify-content-between">
-                            <p class="font-[700] text-[24px] text-[#050505]">Chat</p>
+                            <p class="font-[700] text-[24px] text-[#050505] dark:text-[#e4e6eb]">Chat</p>
                             <div class="flex align-items-center gap-[15px]">
-                                <img src="img/chattingNav/more.png" class="h-[20px] w-[20px]">
-                                <img src="img/messengerBox/maximize.png" class="h-[20px] w-[20px]">
-                                <img src="img/messengerBox/edit.png" class="h-[20px] w-[20px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 32.055 32.055"
+                                    class="h-[20px] w-[20px] fill-[#606770] dark:fill-[#A8ABAF]">
+                                    <path
+                                        d="M3.968,12.061C1.775,12.061,0,13.835,0,16.027c0,2.192,1.773,3.967,3.968,3.967c2.189,0,3.966-1.772,3.966-3.967   C7.934,13.835,6.157,12.061,3.968,12.061z M16.233,12.061c-2.188,0-3.968,1.773-3.968,3.965c0,2.192,1.778,3.967,3.968,3.967   s3.97-1.772,3.97-3.967C20.201,13.835,18.423,12.061,16.233,12.061z M28.09,12.061c-2.192,0-3.969,1.774-3.969,3.967   c0,2.19,1.774,3.965,3.969,3.965c2.188,0,3.965-1.772,3.965-3.965S30.278,12.061,28.09,12.061z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 348.198 348.198"
+                                    class="h-[20px] w-[20px] fill-[#606770] dark:fill-[#A8ABAF]">
+                                    <polygon
+                                        points="348.198,113.995 348.198,0 234.204,0 234.204,30 297.012,30 174.099,152.913 51.187,30 113.995,30 113.995,0 0,0   0,113.995 30,113.995 30,51.24 152.886,174.126 30,297.011 30,234.203 0,234.203 0,348.198 113.995,348.198 113.995,318.198   51.239,318.198 174.099,195.339 296.959,318.198 234.204,318.198 234.204,348.198 348.198,348.198 348.198,234.203 318.198,234.203   318.198,297.011 195.312,174.126 318.198,51.24 318.198,113.995 " />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 511.999 511.999"
+                                    class="h-[23px] w-[23px] fill-[#606770] dark:fill-[#A8ABAF]">
+                                    <path
+                                        d="M511.999,102.871c0-7.743-3.015-15.022-8.49-20.496l-11.386-11.388c-5.475-5.475-12.755-8.49-20.498-8.49    c-7.743,0-15.022,3.015-20.498,8.49l-53.653,53.653V67.463c0-5.632-4.567-10.199-10.199-10.199H10.199    C4.566,57.263,0,61.831,0,67.463v377.074c0,5.632,4.566,10.199,10.199,10.199h377.075c5.632,0,10.199-4.567,10.199-10.199    l-0.004-215.126l106.04-106.041C508.984,117.895,511.999,110.614,511.999,102.871z M377.075,434.337H20.398V77.663h356.676v67.376    L190.347,331.766c-1.12,1.12-1.963,2.486-2.464,3.987l-18.98,56.939c-1.222,3.665-0.268,7.706,2.464,10.437    c1.944,1.944,4.551,2.987,7.214,2.987c1.079,0,2.167-0.171,3.224-0.523l56.939-18.979c1.502-0.501,2.867-1.344,3.987-2.464    l134.344-134.344V434.337z M230.008,368.024l-35.304,11.767l11.768-35.304l216.563-216.563l23.536,23.536L230.008,368.024z     M489.085,108.945l-28.09,28.091l-11.768-11.768L437.46,113.5l28.091-28.091c1.623-1.623,3.779-2.516,6.074-2.516    c2.295,0,4.451,0.893,6.074,2.515l11.387,11.388c0,0.001,0,0.001,0.001,0.001c1.622,1.623,2.515,3.779,2.515,6.073    C491.602,105.166,490.708,107.323,489.085,108.945z" />
+                                    <path
+                                        d="M318.125,121.009h-9.724c-5.632,0-10.199,4.567-10.199,10.199c0,5.632,4.566,10.199,10.199,10.199h9.724    c5.632,0,10.199-4.567,10.199-10.199C328.325,125.577,323.757,121.009,318.125,121.009z" />
+                                    <path
+                                        d="M264.103,121.009H78.267c-5.633,0-10.199,4.567-10.199,10.199c0,5.632,4.566,10.199,10.199,10.199h185.837    c5.632,0,10.199-4.567,10.199-10.199C274.302,125.577,269.735,121.009,264.103,121.009z" />
+                                    <path
+                                        d="M254.379,180.434H78.267c-5.633,0-10.199,4.567-10.199,10.199c0,5.632,4.566,10.199,10.199,10.199h176.113    c5.632,0,10.199-4.567,10.199-10.199C264.579,185.001,260.011,180.434,254.379,180.434z" />
+                                    <path
+                                        d="M190.633,239.859H78.267c-5.633,0-10.199,4.567-10.199,10.199c0,5.632,4.566,10.199,10.199,10.199h112.367    c5.633,0,10.199-4.567,10.199-10.199C200.833,244.426,196.266,239.859,190.633,239.859z" />
+                                    <path
+                                        d="M142.014,298.202H78.267c-5.633,0-10.199,4.567-10.199,10.199c0,5.632,4.566,10.199,10.199,10.199h63.746    c5.633,0,10.199-4.567,10.199-10.199C152.212,302.769,147.647,298.202,142.014,298.202z" />
+
+                                </svg>
                             </div>
                         </div>
                         <div
-                            class="flex align-items-center h-[36px] w-ful p-[10px] rounded-[30px] bg-[#F0F2F5] mt-[15px]">
-                            <img src="img/nav_bar/search.png" class="h-[16px] w-[16px] mr-[10px]">
-                            <input type="text" class="bg-transparent flex-1 outline-none text-[#050505]"
+                            class="flex align-items-center h-[36px] w-ful p-[10px] rounded-[30px] bg-[#F0F2F5] dark:bg-[#3A3B3C] mt-[15px]">
+                            <!-- <img src="img/nav_bar/search.png" class="h-[16px] w-[16px] mr-[10px]"> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 52.966 52.966" class="h-[16px] w-[16px] mr-[10px] dark:fill-[#B0B3B8]">
+                                <path
+                                    d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21  c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279  C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19  S32.459,40,21.983,40z" />
+                            </svg>
+                            <input type="text"
+                                class="bg-transparent flex-1 outline-none text-[#050505] dark:text-[white]"
                                 placeholder="Tìm kiếm trên Messenger">
                         </div>
                         <div class="flex justify-content-center">
-                            <p class="mt-[15px] font-[400] text-[17px] text-[#050505]">Không tìm thấy tin nhắn</p>
+                            <p class="mt-[15px] font-[400] text-[17px] text-[#050505] dark:text-[#e4e6eb]">Không tìm
+                                thấy tin nhắn</p>
                         </div>
                     </div>
                     <div class="py-[10px]">
@@ -145,223 +276,287 @@
                 </div>
             </button>
             <button
-                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]">
-                <img src="img/nav_bar/notification.png" class="w-[20px] h-[20px] mx-[auto]">
-                <div class="hidden absolute w-[343px] rounded-lg shadow-lg bg-white top-100 left-[-240px] p-[15px]">
+                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] dark:bg-[#3A3B3C] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF] dark:hover:bg-[#4E4F50]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    class="h-[20px] w-[20px] mx-auto dark:fill-[#E4E6EB]">
+                    <path
+                        d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z" />
+                </svg>
+                <div
+                    class="hidden absolute w-[343px] rounded-lg shadow-lg bg-[white] dark:bg-[#242526] top-100 left-[-240px] p-[15px]">
                     <div class="flex align-items-center justify-content-between">
-                        <p class="font-[700] text-[24px] text-[#050505]">Thông báo</p>
-                        <img src="img/chattingNav/more.png" class="h-[20px] w-[20px]">
+                        <p class="font-[700] text-[24px] text-[#050505] dark:text-[#e4e6eb]">Thông báo</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 32.055 32.055" class="h-[20px] w-[20px] fill-[#606770] dark:fill-[#A8ABAF]">
+                            <path
+                                d="M3.968,12.061C1.775,12.061,0,13.835,0,16.027c0,2.192,1.773,3.967,3.968,3.967c2.189,0,3.966-1.772,3.966-3.967   C7.934,13.835,6.157,12.061,3.968,12.061z M16.233,12.061c-2.188,0-3.968,1.773-3.968,3.965c0,2.192,1.778,3.967,3.968,3.967   s3.97-1.772,3.97-3.967C20.201,13.835,18.423,12.061,16.233,12.061z M28.09,12.061c-2.192,0-3.969,1.774-3.969,3.967   c0,2.19,1.774,3.965,3.969,3.965c2.188,0,3.965-1.772,3.965-3.965S30.278,12.061,28.09,12.061z" />
+                        </svg>
                     </div>
                     <div class="flex mt-[10px]">
                         <div
-                            class="h-[36px] px-[10px] py-[15px] bg-[#E7F3FF] flex align-items-center justify-content-between rounded-[30px] mr-[10px]">
-                            <p class="font-[600] text-[15px] text-[#1877f2]">Tất cả</p>
+                            class="h-[36px] px-[10px] py-[15px] bg-[#E7F3FF] dark:bg-[#263951] flex align-items-center justify-content-between rounded-[30px] mr-[10px]">
+                            <p class="font-[600] text-[15px] text-[#1877f2] dark:text-[#2d88ff]">Tất cả</p>
                         </div>
                         <div
-                            class="h-[36px] px-[10px] py-[15px] flex align-items-center justify-content-between rounded-[30px] hover:bg-[#F2F2F2] duration-300">
-                            <p class="font-[600] text-[15px] text-[#050505]">Chưa đọc</p>
+                            class="h-[36px] px-[10px] py-[15px] flex align-items-center justify-content-between rounded-[30px] hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300">
+                            <p class="font-[600] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Chưa đọc</p>
                         </div>
                     </div>
                     <img src="img/messengerBox/bell.png" alt="" class="h-[112px] w-[112px] mx-auto mt-[30px] mb-[20px]">
-                    <p class="font-[700] text-[20px] text-[#65676b]">Bạn không có thông báo nào</p>
+                    <p class="font-[700] text-[20px] text-[#65676b] dark:text-[#b0b3b8]">Bạn không có thông báo nào</p>
                 </div>
             </button>
             <button
-                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF]">
-                <img src="img/nav_bar/downward-arrow.png" class="w-[20px] h-[20px] mx-[auto]">
+                class="flex relative align-items-center rounded-[50%] bg-[#E4E6EB] dark:bg-[#3A3B3C] duration-300 w-[46px] cursor-pointer hover:bg-[#D8DADF] dark:hover:bg-[#4E4F50]">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 386.257 386.257" class="h-[15px] w-[15px] mx-auto dark:fill-[#E4E6EB]">
+                    <polygon points="0,96.879 193.129,289.379 386.257,96.879 " />
+                </svg>
             </button>
         </div>
     </div>
     <!-- content -->
     <div class="flex relative top-[56px] w-100 h-[656px]">
         <!-- Left Menu -->
-        <div class="leftMenu hidden lg:block w-full lg:w-[360px] lg:fixed top-[56px] h-[656px] py-[16px] pl-[8px] lg:overflow-auto cursor-pointer"
+        <div class="leftMenu hidden lg:block w-full lg:w-[360px] lg:fixed top-[56px] h-[656px] py-[16px] pl-[8px] lg:overflow-auto cursor-pointer dark:text-[#e4e6eb]"
             id="leftMenu">
-            <div class="leftMenuTop pb-[9px] border-solid border-b-[1px] border-[#CED0D4] mb-[10px]">
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+            <div
+                class="leftMenuTop pb-[9px] border-solid border-b-[1px] border-[#CED0D4] dark:border-[#3E4042] mb-[10px]">
+                <div
+                    class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/avarta.jpg" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Nguyễn Minh Chí</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                <div
+                    class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/friend-color.png" alt=""
                         class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Tìm kiếm bạn bè</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                <div
+                    class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/messenger-color.png" alt=""
                         class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Messenger</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                <div
+                    class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/fanpage-color.png" alt=""
                         class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Trang</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                <div
+                    class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/marketplace-color.png" alt=""
                         class="h-[36px] w-[36px] rounded-full mr-[12px]">
                     <span class="flex-1 font-[500]">Marketplace</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg"
+                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg"
                     id="watchMoreTopButton">
-                    <img src="img/leftMenuImage/arrowDown.png" alt="" class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 490.4 490.4" class="h-[36px] w-[36px] mr-[12px] dark:fill-[#A8ABAF]">
+                        <path
+                            d="M490.4,245.2C490.4,110,380.4,0,245.2,0S0,110,0,245.2s110,245.2,245.2,245.2S490.4,380.4,490.4,245.2z M24.5,245.2    c0-121.7,99-220.7,220.7-220.7s220.7,99,220.7,220.7s-99,220.7-220.7,220.7S24.5,366.9,24.5,245.2z" />
+                        <path
+                            d="M253.9,360.4l68.9-68.9c4.8-4.8,4.8-12.5,0-17.3s-12.5-4.8-17.3,0l-48,48V138.7c0-6.8-5.5-12.3-12.3-12.3    s-12.3,5.5-12.3,12.3v183.4l-48-48c-4.8-4.8-12.5-4.8-17.3,0s-4.8,12.5,0,17.3l68.9,68.9c2.4,2.4,5.5,3.6,8.7,3.6    S251.5,362.8,253.9,360.4z" />
+                    </svg>
                     <span class="flex-1 font-[500]">Xem thêm</span>
                 </div>
                 <div id="leftMenuTopMore" class="hidden">
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/fundraiser-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Chiến dịch gây quỹ</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/play-game-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Chơi game</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/save-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Đã lưu</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/credit-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Facebook Pay</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/latest-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Gần đây nhất</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/blood-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Hiến máu</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/ads-center.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Hoạt động quảng cáo gần đây</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/celebrate-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Kỷ niệm</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/event-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Sự kiện</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/health-and-emotions-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Sức khỏe cảm xúc</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/ads-manage-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Trình quảng lý quảng cáo</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/climate-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Trung tâm Khoa học Khí hậu</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/ads-center.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Trung tâm quảng cáo</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/emergency-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Ứng phó khẩn cấp</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/video-game-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Video chơi game</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/live-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Video trực tiếp</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/favorite-color.png" alt=""
                             class="h-[36px] w-[36px] rounded-full mr-[12px]">
                         <span class="flex-1 font-[500]">Yêu thích</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg"
+                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg"
                         id="hiddenLeftMenuTop">
-                        <img src="img/leftMenuImage/arrowUp.png" alt=""
-                            class="h-[36px] w-[36px] rounded-full mr-[12px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 490.4 490.4" class="h-[36px] w-[36px] mr-[12px] dark:fill-[#A8ABAF]">
+                            <path
+                                d="M245.2,490.4c135.2,0,245.2-110,245.2-245.2S380.4,0,245.2,0S0,110,0,245.2S110,490.4,245.2,490.4z M245.2,24.5    c121.7,0,220.7,99,220.7,220.7s-99,220.7-220.7,220.7s-220.7-99-220.7-220.7S123.5,24.5,245.2,24.5z" />
+                            <path
+                                d="M185,216.2l48-48v183.4c0,6.8,5.5,12.3,12.3,12.3c6.8,0,12.3-5.5,12.3-12.3V168.3l48,48c2.4,2.4,5.5,3.6,8.7,3.6    s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-68.9-68.9c-4.8-4.8-12.5-4.8-17.3,0L167.9,199c-4.8,4.8-4.8,12.5,0,17.3    C172.4,221,180.2,221,185,216.2z" />
+                        </svg>
                         <span class="flex-1 font-[500]">Ẩn bớt</span>
                     </div>
                 </div>
             </div>
             <div class="leftMenuBottom">
                 <div class="relative">
-                    <span class="text-[17px] font-[600] text-[#65676b]">Lối tắt của bạn</span>
+                    <span class="text-[17px] font-[600] text-[#65676b] dark:text-[#b0b3b8]">Lối tắt của bạn</span>
                     <a class="right-[0px] absolute">Chỉnh sửa</a>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                <div
+                    class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/vutrugenz.jpg" alt=""
                         class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">Vũ trụ GenZ</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                <div
+                    class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/d20ptithanoi.jpg" alt=""
                         class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">D20 PTIT Hà Nội</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                <div
+                    class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/cotsonggenz.png" alt=""
                         class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">"Cột sống" GenZ</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                <div
+                    class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/d20ptithanoi.jpg" alt=""
                         class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">D21 PTIT Hà Nội</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                <div
+                    class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                     <img src="img/leftMenuImage/dikhapthegioi.jpg" alt=""
                         class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                     <span class="flex-1 font-[500]">Đi Khắp Thế Giới!</span>
                 </div>
-                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg"
+                <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg"
                     id="watchMoreBottomButton">
-                    <img src="img/leftMenuImage/arrowDown.png" alt=""
-                        class="h-[36px] w-[36px] rounded-full mr-[12px] object-cover">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 490.4 490.4" class="h-[36px] w-[36px] mr-[12px] dark:fill-[#A8ABAF]">
+                        <path
+                            d="M490.4,245.2C490.4,110,380.4,0,245.2,0S0,110,0,245.2s110,245.2,245.2,245.2S490.4,380.4,490.4,245.2z M24.5,245.2    c0-121.7,99-220.7,220.7-220.7s220.7,99,220.7,220.7s-99,220.7-220.7,220.7S24.5,366.9,24.5,245.2z" />
+                        <path
+                            d="M253.9,360.4l68.9-68.9c4.8-4.8,4.8-12.5,0-17.3s-12.5-4.8-17.3,0l-48,48V138.7c0-6.8-5.5-12.3-12.3-12.3    s-12.3,5.5-12.3,12.3v183.4l-48-48c-4.8-4.8-12.5-4.8-17.3,0s-4.8,12.5,0,17.3l68.9,68.9c2.4,2.4,5.5,3.6,8.7,3.6    S251.5,362.8,253.9,360.4z" />
+                    </svg>
                     <span class="flex-1 font-[500]">Xem thêm</span>
                 </div>
                 <div id="leftMenuBottomMore" class="hidden">
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/laptrinhcppcoban.jpg" alt=""
                             class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                         <span class="flex-1 font-[500]">Lập Trình C/C++ Cơ Bản</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/vieclamIT.jpg" alt=""
                             class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                         <span class="flex-1 font-[500]">Việc Làm IT, DEV, Freelancer</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg">
+                    <div
+                        class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg">
                         <img src="img/leftMenuImage/7zone.jpg" alt=""
                             class="h-[36px] w-[36px] rounded-lg mr-[12px] object-cover">
                         <span class="flex-1 font-[500]">7onez Community</span>
                     </div>
-                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] duration-300 rounded-lg"
+                    <div class="flex align-items-center w-100 p-[8px] hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 rounded-lg"
                         id="hiddenLeftMenuBottom">
-                        <img src="img/leftMenuImage/arrowUp.png" alt=""
-                            class="h-[36px] w-[36px] rounded-full mr-[12px] object-cover">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 490.4 490.4" class="h-[36px] w-[36px] mr-[12px] dark:fill-[#A8ABAF]">
+                            <path
+                                d="M245.2,490.4c135.2,0,245.2-110,245.2-245.2S380.4,0,245.2,0S0,110,0,245.2S110,490.4,245.2,490.4z M245.2,24.5    c121.7,0,220.7,99,220.7,220.7s-99,220.7-220.7,220.7s-220.7-99-220.7-220.7S123.5,24.5,245.2,24.5z" />
+                            <path
+                                d="M185,216.2l48-48v183.4c0,6.8,5.5,12.3,12.3,12.3c6.8,0,12.3-5.5,12.3-12.3V168.3l48,48c2.4,2.4,5.5,3.6,8.7,3.6    s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-68.9-68.9c-4.8-4.8-12.5-4.8-17.3,0L167.9,199c-4.8,4.8-4.8,12.5,0,17.3    C172.4,221,180.2,221,185,216.2z" />
+                        </svg>
                         <span class="flex-1 font-[500]">Ẩn bớt</span>
                     </div>
                 </div>
             </div>
-            <div class="text-[13px] text-[400] text-[#65676b]">
+            <div class="text-[13px] text-[400] text-[#65676b] dark:text-[#b0b3b8]">
                 <a href="#">Quyền riêng tư . </a>
                 <a href="#">Điều khoản . </a>
                 <a href="#">Quảng cáo . </a>
@@ -374,21 +569,21 @@
         <div
             class="newFeeds relative mx-[auto] lg:mx-0 top-[24px] w-[400px] sm:w-[550px] md:w-[650px] lg:w-[592px] lg:left-[400px] xl:left-[519px]">
             <!-- Story, Reels, Room Meeting conatiner -->
-            <div class="flex flex-col w-full h-[310px] bg-white rounded-xl shadow-md mb-[16px]">
+            <div class="flex flex-col w-full h-[310px] bg-[white] dark:bg-[#242526] rounded-xl shadow-md mb-[16px]">
                 <!-- Title -->
-                <div class="grid grid-cols-3 gap-[15px] w-full h-[72px] border-b-[1px] border-solid border-[#E5E5E5] px-[16px] py-[5px]"
+                <div class="grid grid-cols-3 gap-[15px] w-full h-[72px] border-solid border-b-[1px] border-[#CED0D4] dark:border-[#3E4042] px-[16px] py-[5px]"
                     id="storyReelsTitle">
                     <button
-                        class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] duration-300 cursor-pointer text-[#65676b] before:content-[''] before:absolute before:bottom-[-6px] before:bg-[#1B74E4] before:w-full before:h-[5px] text-[#1B74E4]">
-                        <p class="font-[600] mx-[auto]">Tin</p>
+                        class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] dark:hover:bg-[#303031] duration-300 cursor-pointer text-[#65676b] dark:text-[#b0b3b8] before:content-[''] before:absolute before:bottom-[-6px] before:bg-[#1B74E4] before:w-full before:h-[5px]">
+                        <p class="font-[600] mx-[auto] text-[#1B74E4] dark:text-[#1B74E4]">Tin</p>
                     </button>
                     <button
-                        class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] duration-300 cursor-pointer text-[#65676b]">
-                        <p class="font-[600] mx-[auto]">Reels</p>
+                        class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] dark:hover:bg-[#303031] duration-300 cursor-pointer text-[#65676b] dark:text-[#b0b3b8]">
+                        <p class="font-[600] mx-[auto] dark:text-[#b0b3b8]">Reels</p>
                     </button>
                     <button
-                        class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] duration-300 cursor-pointer text-[#65676b]">
-                        <p class="font-[600] mx-[auto] text-center">Phòng họp mặt</p>
+                        class="flex align-items-center relative rounded-lg hover:bg-[#F2F2F2] dark:hover:bg-[#303031] duration-300 cursor-pointer text-[#65676b] dark:text-[#b0b3b8]">
+                        <p class="font-[600] mx-[auto] text-center dark:text-[#b0b3b8]">Phòng họp mặt</p>
                     </button>
                 </div>
                 <!-- Content -->
@@ -396,35 +591,51 @@
                     <!-- Story -->
                     <div class="flex absolute align-items-center" style="visibility: visible;">
                         <div
-                            class="h-[206px] w-[115px] overflow-hidden rounded-xl shadow-[0_1px_1px_0_#e7e9eb] border cursor-pointer mr-[20px]">
+                            class="h-[206px] w-[115px] overflow-hidden rounded-xl border-solid border-[1px] border-[#CED0D4] dark:border-[#3E4042] cursor-pointer mr-[20px]">
                             <img src="img/leftMenuImage/avarta.jpg" alt="" class="h-[75%] w-100 object-cover">
                             <img src="img/storyReels/createStory.png" alt=""
                                 class="h-[25px] w-[25px] mx-[auto] mt-[5px]">
-                            <p class="text-center text-[12px] font-[600] text-[#040404]">Tạo tin</p>
+                            <p class="text-center text-[12px] font-[600] text-[#040404] dark:text-[#e4e6eb]">Tạo tin</p>
                         </div>
                         <div class="text-[13px] text-[400] text-[#050505]">
                             <div class="flex mb-[20px]">
-                                <img src="img/storyReels/story-love-letter.png" alt=""
-                                    class="h-[20px] w-[20px] mr-[15px]">
-                                <span>Chia sẻ khoảnh khắc với gia đình và bạn bè.</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 511 511" class="h-[20px] w-[20px] mr-[15px] dark:fill-[#B0B3B8]">
+                                    <path
+                                        d="M0,104v303h511V104H0z M308.486,288H202.514L26.166,119h458.668L308.486,288z M149.871,258.327L15,382.409V129.076   L149.871,258.327z M160.723,268.727L196.486,303h118.027l35.764-34.273L484.27,392H26.73L160.723,268.727z M361.129,258.327   L496,129.076v253.333L361.129,258.327z" />
+                                    <rect x="399.5" y="136" width="24" height="15" />
+                                    <rect x="255.5" y="136" width="128" height="15" />
+                                </svg>
+                                <span class="dark:text-[#e4e6eb]">Chia sẻ khoảnh khắc với gia đình và bạn bè.</span>
                             </div>
                             <div class="flex mb-[20px]">
-                                <img src="img/storyReels/story-alarm.png" alt="" class="h-[20px] w-[20px] mr-[15px]">
-                                <span>Tin sẽ biến mất sau 24h giờ.</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 187.852 187.852"
+                                    class="h-[20px] w-[20px] mr-[15px] dark:fill-[#B0B3B8]">
+                                    <path
+                                        d="m185.975,75.172c-0.661-3.247-3.826-5.339-7.077-4.682-0.432,0.088-0.843,0.223-1.23,0.395-2.524,1.115-4.025,3.867-3.452,6.682 6.364,31.255-6.146,63.636-31.873,82.495-17.538,12.856-39.179,18.089-60.937,14.739-21.758-3.352-40.821-14.856-53.677-32.395-26.73-36.468-18.81-87.883 17.656-114.615 17.538-12.855 39.18-18.088 60.937-14.739 21.13,3.255 39.701,14.217 52.531,30.91l-5.516-.793c-3.283-0.474-6.322,1.805-6.793,5.085-0.472,3.28 1.805,6.321 5.085,6.793l19.915,2.864c0.132,0.019 0.262,0.018 0.394,0.028 0.156,0.012 0.313,0.034 0.468,0.034 2.936,0 5.501-2.157 5.932-5.147l2.864-19.915c0.472-3.28-1.805-6.321-5.085-6.793-3.281-0.473-6.321,1.805-6.793,5.085l-.811,5.639c-14.725-19.262-36.074-31.909-60.363-35.65-24.925-3.842-49.735,2.17-69.858,16.92-20.124,14.753-33.322,36.604-37.161,61.529-3.839,24.926 2.169,49.735 16.921,69.859 14.751,20.123 36.602,33.32 61.528,37.16 4.914,0.757 9.821,1.131 14.691,1.131 19.833,0 39.012-6.209 55.167-18.052 29.49-21.618 43.832-58.738 36.537-94.567z" />
+                                    <path
+                                        d="m126.601,96.171h-20.48c-1.502-3.399-4.234-6.132-7.633-7.633v-46.034c0-3.313-2.687-6-6-6s-6,2.687-6,6v46.034c-5.236,2.314-8.904,7.55-8.904,13.633 0,8.218 6.686,14.904 14.904,14.904 6.083,0 11.319-3.668 13.633-8.904h20.48c3.313,0 6-2.687 6-6s-2.687-6-6-6zm-37.018,6c0-1.602 1.303-2.905 2.904-2.905s2.905,1.303 2.905,2.905-1.303,2.904-2.905,2.904-2.904-1.303-2.904-2.904z" />
+                                </svg>
+                                <span class="dark:text-[#e4e6eb]">Tin sẽ biến mất sau 24h giờ.</span>
                             </div>
                             <div class="flex mb-[20px]">
-                                <img src="img/storyReels/story-messenger.png" alt=""
-                                    class="h-[20px] w-[20px] mr-[15px]">
-                                <span>Câu trả lời, cảm xúc hiển thị riêng tư.</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    class="h-[25px] w-[25px] mr-[15px] dark:fill-[#B0B3B8]">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path fill-rule="nonzero"
+                                        d="M7.764 19.225c.59-.26 1.25-.309 1.868-.139.77.21 1.565.316 2.368.314 4.585 0 8-3.287 8-7.7S16.585 4 12 4s-8 3.287-8 7.7c0 2.27.896 4.272 2.466 5.676a2.8 2.8 0 0 1 .942 2.006l.356-.157zM12 2c5.634 0 10 4.127 10 9.7 0 5.573-4.366 9.7-10 9.7a10.894 10.894 0 0 1-2.895-.384.8.8 0 0 0-.534.039l-1.984.876a.8.8 0 0 1-1.123-.707l-.055-1.78a.797.797 0 0 0-.268-.57C3.195 17.135 2 14.617 2 11.7 2 6.127 6.367 2 12 2zM5.995 14.537l2.937-4.66a1.5 1.5 0 0 1 2.17-.4l2.336 1.75a.6.6 0 0 0 .723 0l3.155-2.396c.421-.319.971.185.689.633l-2.937 4.66a1.5 1.5 0 0 1-2.17.4l-2.336-1.75a.6.6 0 0 0-.723 0l-3.155 2.395c-.421.319-.971-.185-.689-.633z" />
+                                </svg>
+                                <span class="dark:text-[#e4e6eb]">Câu trả lời, cảm xúc hiển thị riêng tư.</span>
                             </div>
                         </div>
                     </div>
                     <!-- Reels -->
                     <div class="absolute" style="visibility: hidden;">
-                        <div class="absolute h-[206px] w-[115px] overflow-hidden rounded-xl shadow-[0_1px_1px_0_#e7e9eb] border cursor-pointer p-[10px]"
+                        <div class="absolute h-[206px] w-[115px] overflow-hidden rounded-xl border-solid border-[1px] border-[#CED0D4] dark:border-[#3E4042] cursor-pointer p-[10px]"
                             style="background-image: linear-gradient(to right top, #ffbd7e, #ffa982, #ff9590, #ff86a5, #f57dbe);">
                             <div
-                                class="flex align-items-center h-[75px] w-[75px] rounded-full bg-white mx-[auto] mt-[30px]">
+                                class="flex align-items-center h-[75px] w-[75px] rounded-full bg-[white] mx-[auto] mt-[30px]">
                                 <img src="img/storyReels/createReels.png" alt="" class="h-[35px] w-[35px] mx-[auto]">
                             </div>
                             <div class="h-[30px] w-[30px] rounded-full absolute top-[75px] right-[10px] p-[4px]"
@@ -438,48 +649,54 @@
                     </div>
                     <!-- Room Meeting -->
                     <div class="absolute" style="visibility: hidden;">
-                        <div class="w-[162px] h-[206px] rounded-xl border-2 p-[10px] cursor-pointer hover:bg-[#F2F2F2]">
-                            <div class="flex align-items-center h-[60px] w-[60px] rounded-full border-3 mx-[auto]">
+                        <div
+                            class="w-[162px] h-[206px] rounded-xl border-2 dark:border-[#3E4042] p-[10px] cursor-pointer hover:bg-[#F2F2F2] dark:hover:bg-[#303031]">
+                            <div
+                                class="flex align-items-center h-[60px] w-[60px] rounded-full border-3 dark:border-[#3E4042] mx-[auto]">
                                 <img src="img/storyReels/createRoomMeeting.png" alt=""
                                     class="mx-[auto] h-[25px] w-[25px]">
                             </div>
-                            <p class="text-center mt-[10px] font-[600] text-[15px]">Phòng họp mặt</p>
-                            <p class="text-center font-[400] text-[13px] text-[#65676b]">Bắt đầu</p>
-                            <button class="w-full h-[36px] border-3 rounded-lg mt-[35px]">Tạo</button>
+                            <p class="text-center mt-[10px] font-[600] text-[15px] dark:text-[#e4e6eb]">Phòng họp mặt
+                            </p>
+                            <p class="text-center font-[400] text-[13px] text-[#65676b] dark:text-[#b0b3b8]">Bắt đầu</p>
+                            <button
+                                class="w-full h-[36px] border-3 dark:border-[#3E4042] rounded-lg mt-[35px] dark:text-[#e4e6eb]">Tạo</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Posting -->
-            <div class="flex flex-col w-full h-[140px] bg-white rounded-xl shadow-md mb-[16px] p-[16px]">
+            <div
+                class="flex flex-col w-full h-[140px] bg-[white] dark:bg-[#242526] rounded-xl shadow-md mb-[16px] p-[16px]">
                 <div class="flex align-items-center h-[50px] w-full pb-[12px]">
                     <img src="img/leftMenuImage/avarta.jpg" alt=""
                         class="h-full w-[38px] rounded-full mr-[8px] cursor-pointer">
                     <input type="text"
-                        class="h-full flex-1 bg-[#F0F2F5] rounded-[30px] outline-none font-[400] text-[17px] px-[13px] hover:bg-[#E4E6E9] cursor-pointer duration-300"
+                        class="h-full flex-1 bg-[#F0F2F5] dark:bg-[#3A3B3C] rounded-[30px] outline-none font-[400] text-[17px] px-[13px] hover:bg-[#E4E6E9] dark:hover:bg-[#4E4F50] cursor-pointer duration-300"
                         placeholder="Chí ơi, bạn đang nghĩ gì thế?" id="uploadPostButton" data-bs-toggle="modal"
                         data-bs-target="#uploadPostBox">
                 </div>
-                <div class="flex h-[58px] border-t-2 pt-[12px] cursor-pointer font-[600] text-[#65676b] text-[15px]">
+                <div class="flex h-[58px] border-solid border-t-[2px] border-[#CED0D4] dark:border-[#3E4042]
+                pt-[12px] cursor-pointer font-[600] text-[#65676b] text-[15px]">
                     <button
-                        class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] duration-300 py-[5px]">
+                        class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300 py-[5px]">
                         <div class="flex align-items-center mx-[auto]">
                             <img src="img/posting/livestream-color.png" alt="" class="h-[34px] w-[34px] mr-[10px]">
-                            <p>Video trực tiếp</p>
+                            <p class="dark:text-[#b0b3b8]">Video trực tiếp</p>
                         </div>
                     </button>
                     <button
-                        class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] duration-300 py-[5px]">
+                        class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300 py-[5px]">
                         <div class="flex align-items-center mx-[auto]">
                             <img src="img/posting/image.png" alt="" class="h-[34px] w-[34px] mr-[10px]">
-                            <p>Ảnh/video</p>
+                            <p class="dark:text-[#b0b3b8]">Ảnh/video</p>
                         </div>
                     </button>
                     <button
-                        class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] duration-300 py-[5px]">
+                        class="flex flex-1 align-items-center h-full rounded-lg hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-300 py-[5px]">
                         <div class="flex align-items-center mx-[auto]">
                             <img src="img/posting/smile.png" alt="" class="h-[34px] w-[34px] mr-[10px]">
-                            <p>Cảm xúc/Hoạt động</p>
+                            <p class="dark:text-[#b0b3b8]">Cảm xúc/Hoạt động</p>
                         </div>
                     </button>
                 </div>
@@ -490,10 +707,10 @@
         </div>
         <!-- Thanh chat -->
         <div class="fixed right-0 w-[320px] h-[640px] top-[80px] overflow-auto pb-[16px]" id="chattingNav">
-            <div class="border-b-[2px] border-b-[#CED0D4] pb-[8px]">
+            <div class="border-solid border-b-[1px] border-[#CED0D4] dark:border-[#3E4042] pb-[8px]">
                 <div class="flex align-items-center justify-content-between pr-[15px]">
-                    <p class="font-[600] text-[17px] text-[#65676b]">Người liên hệ</p>
-                    <div class="grid align-items-center grid-cols-3 gap-[15px]">
+                    <p class="font-[600] text-[17px] text-[#65676b] dark:text-[#b0b3b8]">Người liên hệ</p>
+                    <div class="flex align-items-center grid-cols-3 gap-[15px]">
                         <img src="img/chattingNav/video-camera.png" alt="" class="h-[15px] w-[15px] cursor-pointer">
                         <img src="img/chattingNav/searching.png" alt="" class="h-[15px] w-[15px] cursor-pointer">
                         <img src="img/chattingNav/more.png" alt="" class="h-[15px] w-[15px] cursor-pointer">
@@ -501,69 +718,70 @@
                 </div>
                 <div class="w-full">
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px] mt-[10px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px] mt-[10px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Quang Hạnh</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Quang Hạnh</p>
                     </div>
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Nguyễn Khang</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Nguyễn Khang</p>
                     </div>
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Nguyễn Huyền</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Nguyễn Huyền</p>
                     </div>
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Quochieu Nguyen</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Quochieu Nguyen</p>
                     </div>
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Nguyen Ngọc Anh</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Nguyen Ngọc Anh</p>
                     </div>
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Nguyễn Anh Nhân</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Nguyễn Anh Nhân</p>
                     </div>
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Thanh Huyen</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Thanh Huyen</p>
                     </div>
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Sky Nguyen</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Sky Nguyen</p>
                     </div>
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Moon The</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Moon The</p>
                     </div>
                 </div>
             </div>
             <div class="mt-[15px]">
-                <p class="font-[600] text-[17px] text-[#65676b]">Cuộc trò chuyện nhóm</p>
+                <p class="font-[600] text-[17px] text-[#65676b] dark:text-[#b0b3b8]">Cuộc trò chuyện nhóm</p>
                 <div class="w-full">
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px] mt-[10px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px] mt-[10px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">C++</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">C++</p>
                     </div>
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px]">
                         <img src="img/chattingNav/user.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Chia sẻ, trao đổi lập trình frontend</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Chia sẻ, trao đổi lập trình
+                            frontend</p>
                     </div>
                     <div
-                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] duration-300 cursor-pointer p-[8px]">
+                        class="flex align-items-center h-[52px] rounded-lg hover:bg-[#E4E6E9] dark:hover:bg-[#303031] duration-300 cursor-pointer p-[8px]">
                         <img src="img/chattingNav/create.png" alt="" class="h-[36px] w-[36px] mr-[12px]">
-                        <p class="font-[500] text-[15px] text-[#050505]">Tạo nhóm mới</p>
+                        <p class="font-[500] text-[15px] text-[#050505] dark:text-[#e4e6eb]">Tạo nhóm mới</p>
                     </div>
                 </div>
             </div>

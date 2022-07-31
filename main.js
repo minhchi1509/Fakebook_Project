@@ -1,3 +1,12 @@
+tailwind.config = {
+    darkMode: "class",
+}
+
+function toggleDarkMode() {
+    const html = document.querySelector("html");
+    html.classList.toggle("dark");
+}
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelector.bind(document);
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -6,29 +15,16 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 })
 
 //Navigation bar homepage, friend, watch, group,... control
-const homePageChildrenList = document.getElementById("Homepage").children;
-for (let x of homePageChildrenList) {
-    x.onclick = function () {
-        for (let y of homePageChildrenList) {
-            y.classList.remove("before:content-['']", "before:absolute", "before:bottom-[-6px]", "before:bg-[#1B74E4]", "before:w-full", "before:h-[5px]");
-            if (!y.classList.contains("hover:bg-[#F2F2F2]")) { //Khong active
-                y.classList.add("hover:bg-[#F2F2F2]");
-                if (y.children[0].src) {
-                    if (y.children[0].src.includes("Filled"))
-                        y.children[0].src = y.children[0].src.replace("Filled", "Rounded");
-                }
-            }
-        }
-        if (x.id != "listHomepageButton" && x.id != "listHomepagePopup" && x.id != "leftMenuControlButton") {
-            x.classList.add("before:content-['']", "before:absolute", "before:bottom-[-6px]", "before:bg-[#1B74E4]", "before:w-full", "before:h-[5px]");
-            x.classList.remove("hover:bg-[#F2F2F2]");
-            if (x.children[0].src) {
-                if (x.children[0].src.includes("Rounded"))
-                    x.children[0].src = x.children[0].src.replace("Rounded", "Filled");
-            }
-        }
+const middleNavbarList = Array.from(document.getElementById("middleNavbarList").querySelectorAll("a")).slice(0, 5);
+const underlineNavbar = document.getElementById("underlineNavbar");
+middleNavbarList.forEach((value) => {
+    value.onclick = function () {
+        for (let activeItem of middleNavbarList)
+            activeItem.children[0].classList.remove("fill-[#1B74E4]", "dark:fill-[#1B74E4]");
+        value.children[0].classList.add("fill-[#1B74E4]", "dark:fill-[#1B74E4]");
+        underlineNavbar.style.left = value.offsetLeft + 'px';
     }
-}
+})
 
 //Searching Popup Control
 const searchingPopup = document.getElementById("searchingPopup");
@@ -94,13 +90,11 @@ const storyReelsContentList = document.getElementById("storyReelsContent").child
 for (let i = 0; i < storyReelsTitleList.length; i++) {
     storyReelsTitleList[i].onclick = function () {
         for (let y of storyReelsTitleList) {
-            y.classList.remove("before:content-['']", "before:absolute", "before:bottom-[-6px]", "before:bg-[#1B74E4]", "before:w-full", "before:h-[5px]", "text-[#1B74E4]");
-            if (!y.classList.contains("hover:bg-[#F2F2F2]")) { //Khong active
-                y.classList.add("hover:bg-[#F2F2F2]");
-            }
+            y.classList.remove("before:content-['']", "before:absolute", "before:bottom-[-6px]", "before:bg-[#1B74E4]", "before:w-full", "before:h-[5px]");
+            y.children[0].classList.remove("text-[#1B74E4]", "dark:text-[#1B74E4]");
         }
-        storyReelsTitleList[i].classList.add("before:content-['']", "before:absolute", "before:bottom-[-6px]", "before:bg-[#1B74E4]", "before:w-full", "before:h-[5px]", "text-[#1B74E4]");
-        storyReelsTitleList[i].classList.remove("hover:bg-[#F2F2F2]");
+        storyReelsTitleList[i].classList.add("before:content-['']", "before:absolute", "before:bottom-[-6px]", "before:bg-[#1B74E4]", "before:w-full", "before:h-[5px]");
+        storyReelsTitleList[i].children[0].classList.add("text-[#1B74E4]", "dark:text-[#1B74E4]");
         for (let x of storyReelsContentList)
             x.style.visibility = "hidden";
         storyReelsContentList[i].style.visibility = "visible";
@@ -218,7 +212,7 @@ $("#uploadStatusBtn").onclick = function () {
 const navBarRightList = Array.from($("#navBarRight").getElementsByTagName("button"));
 navBarRightList.forEach((value) => {
     value.onclick = function (event) {
-        if (event.target === value || event.target === value.children[0]) {
+        if (event.target == value || event.target == value.children[0].children[0] || event.target == value.children[0]) {
             value.children[1].classList.toggle("hidden");
         }
     }
