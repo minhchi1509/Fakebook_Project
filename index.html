@@ -53,7 +53,7 @@
             </div>
         </div>
         <!-- Homepage, Friend, Watch, Group, Gaming -->
-        <div class="relative grid grid-cols-2 gap-[30px] w-[150px] lg:grid-cols-5 lg:gap-[8px] lg:w-[592px]"
+        <div class="relative grid grid-cols-3 sm:grid-cols-2 gap-[10px] sm:gap-[30px] w-[150px] lg:grid-cols-5 lg:gap-[8px] lg:w-[592px]"
             id="middleNavbarList">
             <div class="hidden lg:block absolute w-[112px] h-[5px] bg-[#1B74E4] bottom-[-6px]" id="underlineNavbar"
                 style="left:0px">
@@ -105,6 +105,38 @@
                 </svg>
             </a>
             <!-- On mobile screen -->
+            <div class="sm:hidden p-1 w-[50px] h-[30px] rounded-full border-2 border-black/30 dark:bg-[#3A3B3C] bg-[#333]/10 dark:border-[#929292] relative flex align-items-center top-[50%] translate-y-[-50%]"
+                role="button" style="transition: all 0.5s ease;" onclick="changeMode()">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 49.739 49.739"
+                    class="absolute h-[17px] w-[17px] right-1 duration-500 dark:translate-x-0 translate-x-[-15px] opacity-[0] dark:opacity-[1] dark:fill-[white]">
+                    <path
+                        d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268  c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0  c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822  C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253  c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748  c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 207.628 207.628"
+                    class="h-[17px] w-[17px] duration-500 dark:opacity-[0] dark:translate-x-5">
+                    <circle cx="103.814" cy="103.814" r="45.868" />
+                    <path
+                        d="M103.814,157.183c-29.427,0-53.368-23.941-53.368-53.368s23.941-53.368,53.368-53.368s53.368,23.941,53.368,53.368  S133.241,157.183,103.814,157.183z M103.814,65.446c-21.156,0-38.368,17.212-38.368,38.368s17.212,38.368,38.368,38.368  s38.368-17.212,38.368-38.368S124.97,65.446,103.814,65.446z" />
+                    <path
+                        d="M103.814,39.385c-4.142,0-7.5-3.358-7.5-7.5V7.5c0-4.142,3.358-7.5,7.5-7.5s7.5,3.358,7.5,7.5v24.385  C111.314,36.027,107.956,39.385,103.814,39.385z" />
+                    <path
+                        d="M103.814,207.628c-4.142,0-7.5-3.358-7.5-7.5v-24.385c0-4.142,3.358-7.5,7.5-7.5s7.5,3.358,7.5,7.5v24.385  C111.314,204.271,107.956,207.628,103.814,207.628z" />
+                    <path
+                        d="M200.128,111.314h-24.385c-4.142,0-7.5-3.358-7.5-7.5s3.358-7.5,7.5-7.5h24.385c4.142,0,7.5,3.358,7.5,7.5  S204.271,111.314,200.128,111.314z" />
+                    <path
+                        d="M31.885,111.314H7.5c-4.142,0-7.5-3.358-7.5-7.5s3.358-7.5,7.5-7.5h24.385c4.142,0,7.5,3.358,7.5,7.5  S36.027,111.314,31.885,111.314z" />
+                    <path
+                        d="M154.676,60.452c-1.919,0-3.839-0.732-5.303-2.197c-2.929-2.929-2.929-7.678,0-10.606l17.243-17.242  c2.929-2.929,7.678-2.93,10.606,0c2.929,2.929,2.929,7.678,0,10.606l-17.243,17.242C158.515,59.72,156.595,60.452,154.676,60.452z" />
+                    <path
+                        d="M35.709,179.419c-1.919,0-3.839-0.732-5.303-2.197c-2.929-2.929-2.929-7.678,0-10.606l17.243-17.243  c2.929-2.929,7.678-2.929,10.606,0c2.929,2.929,2.929,7.678,0,10.606l-17.243,17.243C39.548,178.687,37.629,179.419,35.709,179.419z  " />
+                    <path
+                        d="M171.918,179.419c-1.919,0-3.839-0.732-5.303-2.197l-17.243-17.243c-2.929-2.929-2.929-7.678,0-10.606  c2.929-2.929,7.678-2.929,10.606,0l17.243,17.243c2.929,2.929,2.929,7.678,0,10.606  C175.757,178.687,173.838,179.419,171.918,179.419z" />
+                    <path
+                        d="M52.952,60.452c-1.919,0-3.839-0.732-5.303-2.197L30.406,41.013c-2.929-2.929-2.929-7.677,0-10.606  c2.929-2.929,7.678-2.93,10.606,0l17.243,17.242c2.929,2.929,2.929,7.677,0,10.606C56.791,59.72,54.872,60.452,52.952,60.452z" />
+                </svg>
+            </div>
             <a class="flex lg:hidden align-items-center relative rounded-[10px] cursor-pointer hover:bg-[#F2F2F2] dark:hover:bg-[#3A3B3C] duration-500 z-10"
                 id="listHomepageButton">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 377 377"
@@ -248,7 +280,7 @@
                         d="M12 3c-4.92 0-8.91 3.729-8.91 8.332 0 2.616 1.291 4.952 3.311 6.479V21l3.041-1.687c.811.228 1.668.35 2.559.35 4.92 0 8.91-3.73 8.91-8.331C20.91 6.729 16.92 3 12 3zm.938 11.172-2.305-2.394-4.438 2.454 4.865-5.163 2.305 2.395 4.439-2.455-4.866 5.163z" />
                 </svg>
                 <div
-                    class="hidden absolute w-[343px] rounded-lg shadow-lg bg-[white] dark:bg-[#242526] top-100 left-[-190px]">
+                    class="hidden absolute w-[343px] rounded-lg shadow-lg bg-[white] dark:bg-[#242526] top-100 left-[-190px] duration-500">
                     <div class="border-b-[1px] dark:border-b-[#303030] p-[10px] overflow-auto">
                         <div class="flex align-items-center justify-content-between">
                             <p class="font-[700] text-[24px] text-[#050505] dark:text-[#e4e6eb]">Chat</p>
@@ -285,7 +317,7 @@
                             </div>
                         </div>
                         <div
-                            class="flex align-items-center h-[36px] w-ful p-[10px] rounded-[30px] bg-[#F0F2F5] dark:bg-[#3A3B3C] mt-[15px]">
+                            class="flex align-items-center h-[36px] w-ful p-[10px] rounded-[30px] bg-[#F0F2F5] dark:bg-[#3A3B3C] mt-[15px] duration-500">
                             <!-- <img src="img/nav_bar/search.png" class="h-[16px] w-[16px] mr-[10px]"> -->
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 viewBox="0 0 52.966 52.966" class="h-[16px] w-[16px] mr-[10px] dark:fill-[#B0B3B8]">
@@ -315,7 +347,7 @@
                         d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z" />
                 </svg>
                 <div
-                    class="hidden absolute w-[343px] rounded-lg shadow-lg bg-[white] dark:bg-[#242526] top-100 left-[-240px] p-[15px]">
+                    class="hidden absolute w-[343px] rounded-lg shadow-lg bg-[white] dark:bg-[#242526] top-100 left-[-240px] p-[15px] duration-500">
                     <div class="flex align-items-center justify-content-between">
                         <p class="font-[700] text-[24px] text-[#050505] dark:text-[#e4e6eb]">Thông báo</p>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
