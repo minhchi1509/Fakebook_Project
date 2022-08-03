@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head style="width: 100%;">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakebook Login and Signup</title>
+    </style>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Inter" , type="text/css" />
+    <!-- TailwindCss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="width: 100%; background-color: #F0F2F5;">
+    <div
+        class="flex flex-col gap-[25px] md:flex-row md:justify-between items-center relative mx-auto md:top-[72px] h-[536px] max-w-[980px] px-[40px]">
+        <div class="w-[400px] lg:w-[550px] text-center">
+            <p class="text-[40px] text-[#1877F2] font-[900] tracking-wide">FAKEBOOK</p>
+            <h2 class="text-[24px] md:text-[28px] font-[500] text-[#1c1e21]">
+                Fakebook giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h2>
+        </div>
+        <div class="w-[396px]">
+            <div class="flex flex-col items-center w-full bg-white rounded-xl shadow-md p-[16px]">
+                <form action="#" class="flex flex-col items-center w-full border-b-2">
+                    <input type="text" name="email" id="emailLogin" placeholder="Email hoặc số điện thoại"
+                        class="w-full h-[52px] p-[16px] border-2 rounded-md focus:border-blue-400 outline-none">
+                    <input type="password" name="password" id="passwordLogin" placeholder="Mật khẩu"
+                        class="w-full h-[52px] p-[16px] border-2 rounded-md focus:border-blue-400 outline-none mt-[12px]">
+                    <p class="text-rose-600 text-[13px] font-[600] mt-[10px]" style="display: none;"
+                        id="messageLoginError">Tài khoản hoặc mật
+                        khẩu không đúng, vui
+                        lòng thử lại
+                    </p>
+                    <button type="button"
+                        class="w-full h-[48px] rounded-md bg-[#1772EA] mt-[16px] text-[white] font-[700] text-[20px] hover:bg-[#166FE5]"
+                        onclick="loginRequest()">Đăng
+                        nhập</button>
+                    <a href="#" class="mt-[17px] text-[#1877f2] font-[500] text-[14px] hover:underline mb-[16px]">Quên
+                        mật khẩu</a>
+                </form>
+                <button type="button"
+                    class="w-[178px] h-[48px] bg-[#42B72A] rounded-md text-[white] font-[700] text-[17px] mt-[25px] hover:bg-[#36A421]"
+                    data-bs-toggle="modal" data-bs-target="#registerBox">
+                    Tạo tài khoản mới
+                </button>
+            </div>
+            <div class="mt-[28px] text-center">
+                <a href="#" class="text-[16px] font-[600] text-[#1c1e21] hover:underline">Tạo Trang</a>
+                dành cho người nổi tiếng, thương hiệu hoặc doanh nghiệp.
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="registerBox">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-xl shadow-2xl">
+                <div class="modal-header p-[16px] pt-[5px]">
+                    <div>
+                        <p class="font-[700] text-[32px] text-[#1c1e21]">Đăng ký</p>
+                        <p class="font-[400] text-[15px] text-[#606770]">Nhanh chóng và dễ dàng.</p>
+                    </div>
+                    <button class="btn btn-close shadow-none" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-[16px]">
+                    <form action="#">
+                        <div class="w-full" id="fullName_wrapper">
+                            <div class="grid grid-cols-2 gap-[10px]">
+                                <input type="text" placeholder="Họ" required
+                                    class="bg-[#F5F6F7] h-[40px] border-1 rounded-md pl-[10px] outline-none">
+                                <input type="text" placeholder="Tên" required
+                                    class="bg-[#F5F6F7] h-[40px] border-1 rounded-md pl-[10px] outline-none">
+                            </div>
+                            <input type="text" placeholder="Số di động hoặc email"
+                                class="bg-[#F5F6F7] h-[40px] border-1 rounded-md pl-[10px] outline-none w-full mt-[10px]"
+                                id="emailRegister">
+                            <input type="password" placeholder="Mật khẩu mới"
+                                class="bg-[#F5F6F7] h-[40px] border-1 rounded-md pl-[10px] outline-none w-full mt-[10px]"
+                                id="passwordRegister">
+                        </div>
+                        <p class="text-[12px] font-[400] text[#606770] mt-[12px]">Sinh nhật</p>
+                        <div class="grid grid-cols-3 gap-[12px]" id="dateOfBirth_wrapper">
+                            <select name="dateBirth" id="dateBirth"
+                                class="border-1 h-[36px] rounded-md outline-none pl-[5px]">
+                            </select>
+                            <select name="monthBirth" id="monthBirth"
+                                class="border-1 h-[36px] rounded-md outline-none pl-[5px]">
+                            </select>
+                            <select name="yearBirth" id="yearBirth"
+                                class="border-1 h-[36px] rounded-md outline-none pl-[5px]">
+                            </select>
+                        </div>
+                        <p class="text-[12px] font-[400] text[#606770] mt-[12px]">Giới tính</p>
+                        <div class="grid grid-cols-3 gap-[10px]" id="gender_wrapper">
+                            <span class="h-[36px] flex items-center justify-between border-1 rounded-md px-[10px]">
+                                <label for="female">Nữ</label>
+                                <input type="radio" id="female" value="female" name="gender_wrapper">
+                            </span>
+                            <span class="h-[36px] flex items-center justify-between border-1 rounded-md px-[10px]">
+                                <label for="male">Nam</label>
+                                <input type="radio" id="male" value="male" name="gender_wrapper">
+                            </span>
+                            <span class="h-[36px] flex items-center justify-between border-1 rounded-md px-[10px]">
+                                <label for="otherSex">Khác</label>
+                                <input type="radio" id="otherSex" value="other" name="gender_wrapper">
+                            </span>
+                        </div>
+                    </form>
+                    <p class="font-[400] text-[13px] text-[#777777] mt-[10px]">Người dùng dịch vụ của chúng tôi có thể
+                        đã tải
+                        thông tin liên hệ của bạn lên Facebook. <a href="#" class="text-[#385898]">Tìm hiểu thêm.</a>
+                    </p>
+                    <p class="font-[400] text-[13px] text-[#777777] mt-[10px]">
+                        Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="#" class="text-[#385898]">Điều khoản</a>,
+                        <a href="#" class="text-[#385898]">Chính sách quyền riêng tư</a>
+                        và <a href="#" class="text-[#385898]">Chính sách
+                            cookie</a> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận
+                        bất kỳ
+                        lúc nào.
+                    </p>
+                    <button type="button"
+                        class="w-[194px] h-[36px] bg-[#42B72A] rounded-md text-[white] font-[700] text-[17px] mt-[25px] hover:bg-[#36A421] translate-x-[68%] mb-[26px]">
+                        Đăng ký
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const dateOption = document.getElementById("dateBirth");
+        const monthOption = document.getElementById("monthBirth");
+        const yearOption = document.getElementById("yearBirth");
+        for (let i = 1; i <= 31; i++) {
+            let opt = document.createElement("option");
+            opt.value = String(i);
+            opt.innerText = String(i);
+            dateOption.add(opt);
+        }
+        for (let i = 1; i <= 12; i++) {
+            let opt = document.createElement("option");
+            opt.value = String(i);
+            opt.innerText = String(i);
+            monthOption.add(opt);
+        }
+        for (let i = 1905; i <= 2022; i++) {
+            let opt = document.createElement("option");
+            opt.value = String(i);
+            opt.innerText = String(i);
+            yearOption.add(opt);
+        }
+        function loginRequest() {
+            if (document.getElementById("emailLogin").value !== "admin" || document.getElementById("passwordLogin").value !== "123456") {
+                document.getElementById("messageLoginError").style.display = "block";
+            }
+            else {
+                location.replace("main.html");
+            }
+        }
+    </script>
+</body>
+
+</html>
